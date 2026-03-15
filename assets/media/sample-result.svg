@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700">
+  <rect width="1200" height="700" fill="#f6f1e6" />
+  <rect x="40" y="40" width="1120" height="620" fill="#ffffff" stroke="#111111" stroke-width="8" />
+  <rect x="80" y="90" width="1040" height="520" fill="#fffdf8" stroke="#111111" stroke-width="5" />
+  <circle cx="180" cy="170" r="28" fill="#111111" />
+  <circle cx="260" cy="170" r="28" fill="#111111" />
+  <circle cx="340" cy="170" r="28" fill="#111111" />
+  <text x="120" y="280" fill="#111111" font-family="Courier New, monospace" font-size="54">Workflow Result Screen</text>
+  <text x="120" y="355" fill="#444444" font-family="Courier New, monospace" font-size="28">Good for status, confirmation, or processed output screenshots.</text>
+  <text x="120" y="410" fill="#444444" font-family="Courier New, monospace" font-size="28">Swap this sample file out once your real images are ready.</text>
+</svg>

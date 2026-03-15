@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700">
+  <rect width="1200" height="700" fill="#f6f1e6" />
+  <rect x="40" y="40" width="1120" height="620" fill="#ffffff" stroke="#111111" stroke-width="8" />
+  <rect x="80" y="90" width="220" height="520" fill="#faf7ef" stroke="#111111" stroke-width="5" />
+  <rect x="340" y="90" width="780" height="120" fill="#fffdf8" stroke="#111111" stroke-width="5" />
+  <rect x="340" y="245" width="360" height="160" fill="#fffdf8" stroke="#111111" stroke-width="5" />
+  <rect x="760" y="245" width="360" height="160" fill="#fffdf8" stroke="#111111" stroke-width="5" />
+  <rect x="340" y="440" width="780" height="170" fill="#fffdf8" stroke="#111111" stroke-width="5" />
+  <text x="88" y="135" fill="#111111" font-family="Courier New, monospace" font-size="34">Project Nav</text>
+  <text x="375" y="155" fill="#111111" font-family="Courier New, monospace" font-size="54">Overview Screen</text>
+  <text x="375" y="305" fill="#444444" font-family="Courier New, monospace" font-size="28">Use this sample image until real screenshots are added.</text>
+  <text x="375" y="495" fill="#444444" font-family="Courier New, monospace" font-size="28">Replace this file with a real product screenshot later.</text>
+</svg>

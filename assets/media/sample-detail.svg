@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700">
+  <rect width="1200" height="700" fill="#f6f1e6" />
+  <rect x="40" y="40" width="1120" height="620" fill="#ffffff" stroke="#111111" stroke-width="8" />
+  <rect x="70" y="90" width="1060" height="70" fill="#fffdf8" stroke="#111111" stroke-width="5" />
+  <rect x="70" y="200" width="500" height="380" fill="#fffdf8" stroke="#111111" stroke-width="5" />
+  <rect x="610" y="200" width="520" height="180" fill="#fffdf8" stroke="#111111" stroke-width="5" />
+  <rect x="610" y="400" width="520" height="180" fill="#fffdf8" stroke="#111111" stroke-width="5" />
+  <text x="95" y="136" fill="#111111" font-family="Courier New, monospace" font-size="50">Detail Screen</text>
+  <text x="110" y="280" fill="#444444" font-family="Courier New, monospace" font-size="28">Use this sample for a form, detail view, or edit screen.</text>
+  <text x="110" y="330" fill="#444444" font-family="Courier New, monospace" font-size="28">Replace with your actual product image when ready.</text>
+</svg>

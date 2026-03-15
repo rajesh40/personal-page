@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rajesh Kumar | Backend Portfolio</title>
+    <link rel="stylesheet" href="styles/sketch.css" />
+  </head>
+  <body>
+    <div class="page-wrap">
+      <main class="home-shell">
+        <section class="home-top">
+          <div class="mini-profile">
+            <div class="mini-photo">
+              <img
+                class="profile-image"
+                src="assets/profile-photo.png"
+                alt="Rajesh Kumar profile photo"
+                onerror="
+                  this.style.display = 'none';
+                  this.nextElementSibling.style.display = 'grid';
+                "
+              />
+              <div class="photo-slot photo-fallback">
+                Add profile photo file at<br />
+                assets/profile-photo.png
+              </div>
+            </div>
+            <div class="mini-profile-copy">
+              <p class="label">Backend Portfolio</p>
+              <h1 class="home-name">Rajesh Kumar</h1>
+              <p class="home-role">Backend Developer (Node.js / TypeScript)</p>
+            </div>
+          </div>
+
+          <div class="mini-contact">
+            <a href="tel:+918470873414">8470873414</a>
+            <a href="mailto:mcarajeshkumar40@gmail.com"
+              >mcarajeshkumar40@gmail.com</a
+            >
+          </div>
+        </section>
+
+        <section class="home-intro">
+          <p class="label">Portfolio Home</p>
+          <h2 class="page-title">Project Showcase</h2>
+          <p class="summary-text">
+            Production-focused portfolio for backend-heavy product work across
+            logistics, workflows, integrations, and billing systems.
+          </p>
+        </section>
+
+        <section class="showcase-grid">
+          <article class="showcase-card">
+            <h2>Vehicle Inspection</h2>
+            <p class="detail-text">
+              Inspection workflow, form handling, validation, and operational
+              process logic.
+            </p>
+            <div class="link-list">
+              <a href="vehicle-inspection.html">Open Project</a>
+            </div>
+          </article>
+
+          <article class="showcase-card">
+            <h2>Rule Manager</h2>
+            <p class="detail-text">
+              Business-rule configuration, automated workflow behavior, and
+              filter-driven operations.
+            </p>
+            <div class="link-list">
+              <a href="rule-manager.html">Open Project</a>
+            </div>
+          </article>
+
+          <article class="showcase-card">
+            <h2>Batch</h2>
+            <p class="detail-text">
+              Grouped order or booking handling for bulk operational workflows
+              and staged processing.
+            </p>
+            <div class="link-list">
+              <a href="batch-operations.html">Open Project</a>
+            </div>
+          </article>
+
+          <article class="showcase-card">
+            <h2>Third Party Order Fetch</h2>
+            <p class="detail-text">
+              External order sync and internal order-processing flow from
+              third-party channels.
+            </p>
+            <div class="link-list">
+              <a href="order-integrations.html">Open Project</a>
+            </div>
+          </article>
+
+          <article class="showcase-card">
+            <h2>Bagging</h2>
+            <p class="detail-text">
+              Bagging and grouped shipment workflow in logistics operations and
+              handling flow.
+            </p>
+            <div class="link-list">
+              <a href="bagging.html">Open Project</a>
+            </div>
+          </article>
+
+          <article class="showcase-card">
+            <h2>Chargebee Cart and Payments</h2>
+            <p class="detail-text">
+              Cart, billing, and payment workflow tied to Chargebee-based
+              subscription handling.
+            </p>
+            <div class="link-list">
+              <a href="chargebee-cart.html">Open Project</a>
+            </div>
+          </article>
+        </section>
+
+        <footer class="footer-row home-footer">
+          <span class="footer-link"
+            >Projects are the primary focus of this portfolio.</span
+          >
+          <a class="footer-link" href="rule-manager.html"
+            >Start With Rule Manager</a
+          >
+        </footer>
+      </main>
+    </div>
+  </body>
+</html>
