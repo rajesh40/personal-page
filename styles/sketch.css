@@ -767,19 +767,25 @@ code {
 }
 
 .stack-chip,
-.tech-chip {
+.tech-chip,
+.header-meta-tech {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  --badge-border: #c6d6ee;
+  --badge-bg: #f3f7fc;
   min-height: 34px;
   padding: 8px 12px;
   border-radius: 999px;
-  border: 1px solid #c6d6ee;
-  background: #ffffff;
-  color: #234d8e;
+  border: 1px solid var(--badge-border);
+  background: var(--badge-bg);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.55);
+  color: #233247;
   font-size: 14px;
   font-weight: 700;
   line-height: 1;
+  white-space: nowrap;
+  transition: border-color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
 }
 
 .stack-chip--modern {
@@ -811,16 +817,164 @@ code {
 }
 
 .header-meta-group {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
   min-width: 0;
+  padding: 4px 6px 4px 0;
 }
 
 .header-meta-group strong {
+  display: inline-flex;
+  align-items: center;
   color: #274a80;
+  font-weight: 800;
+}
+
+.header-meta-group--modern,
+.header-meta-group--legacy {
+  border-radius: 999px;
+  border: 1px solid #d7e2f0;
+  background: linear-gradient(180deg, #ffffff 0%, #f9fbff 100%);
+  padding: 6px 10px;
+}
+
+.header-meta-group--legacy {
+  background: linear-gradient(180deg, #ffffff 0%, #fbfcff 100%);
+}
+
+.header-meta-chip-list {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.header-meta-tech {
+  min-height: 24px;
+  padding: 4px 9px;
+  font-size: 11px;
   font-weight: 800;
 }
 
 .header-meta-divider {
   color: #93a7c4;
+}
+
+.tone-nextjs {
+  --badge-border: #efc5d7;
+  --badge-bg: #ffdce8;
+}
+
+.tone-nestjs {
+  --badge-border: #c1dfc8;
+  --badge-bg: #dbf4e1;
+}
+
+.tone-typescript {
+  --badge-border: #efcadd;
+  --badge-bg: #ffe0ec;
+}
+
+.tone-redis {
+  --badge-border: #f0c7be;
+  --badge-bg: #ffe4dd;
+}
+
+.tone-prisma {
+  --badge-border: #e9c7dc;
+  --badge-bg: #ffdeed;
+}
+
+.tone-typeorm {
+  --badge-border: #c1ddd6;
+  --badge-bg: #dcf1eb;
+}
+
+.tone-postgresql {
+  --badge-border: #c9d4f3;
+  --badge-bg: #dde8ff;
+}
+
+.tone-redux {
+  --badge-border: #e6c4dd;
+  --badge-bg: #ffdcec;
+}
+
+.tone-angularjs {
+  --badge-border: #f1c7d2;
+  --badge-bg: #ffe1e8;
+}
+
+.tone-php {
+  --badge-border: #d1d7f2;
+  --badge-bg: #e5ebff;
+}
+
+.tone-zendmvc {
+  --badge-border: #e1d7bf;
+  --badge-bg: #efe8d5;
+}
+
+.tone-multicarrier {
+  --badge-border: #cde3f0;
+  --badge-bg: #e1f1f8;
+}
+
+.tone-bookingapis {
+  --badge-border: #c9deea;
+  --badge-bg: #dfedf6;
+}
+
+.tone-orderingestion {
+  --badge-border: #d6dfef;
+  --badge-bg: #e8eef7;
+}
+
+.tone-portalui {
+  --badge-border: #d8dded;
+  --badge-bg: #e9edf6;
+}
+
+.tone-ordersync {
+  --badge-border: #d4dfec;
+  --badge-bg: #e6eff5;
+}
+
+.tone-mqtt {
+  --badge-border: #c6dfe7;
+  --badge-bg: #ddf0f6;
+}
+
+.tone-apiroutes {
+  --badge-border: #c8d9f0;
+  --badge-bg: #deebff;
+}
+
+.tone-tokenflows {
+  --badge-border: #d8dcef;
+  --badge-bg: #eceef6;
+}
+
+.tone-externalapis {
+  --badge-border: #cadfe9;
+  --badge-bg: #dfedf4;
+}
+
+.tone-express {
+  --badge-border: #e9cada;
+  --badge-bg: #ffe2ee;
+}
+
+.tone-socketio {
+  --badge-border: #c5dde6;
+  --badge-bg: #dceef5;
+}
+
+.tone-firebase {
+  --badge-border: #efd8ae;
+  --badge-bg: #ffefcf;
 }
 
 .dashboard-section,
