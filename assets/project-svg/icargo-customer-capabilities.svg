@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1040" viewBox="0 0 1400 1040" role="img" aria-labelledby="title desc">
+  <title id="title">iCargo Customer capabilities overview</title>
+  <desc id="desc">Customer portal capability view showing cards, package list, SKU mapping, store-order fetch, carrier choice, single and multi-order booking, batch actions, and rules.</desc>
+  <defs>
+    <style>
+      .bg { fill: #f6f8fc; }
+      .card { fill: #ffffff; stroke: #d7e1f2; stroke-width: 2; }
+      .headBlue { fill: #1f5ca8; }
+      .headGreen { fill: #12936a; }
+      .headGold { fill: #d88614; }
+      .headPurple { fill: #6b4aa8; }
+      .title { font: 700 28px Arial, sans-serif; fill: #1d2b4f; }
+      .subtitle { font: 400 15px Arial, sans-serif; fill: #5d6d8c; }
+      .section { font: 700 22px Arial, sans-serif; fill: #1d2b4f; }
+      .small { font: 400 14px Arial, sans-serif; fill: #46556f; }
+      .body { font: 600 15px Arial, sans-serif; fill: #23304f; }
+      .chip { font: 700 12px Arial, sans-serif; fill: #ffffff; }
+      .pill { font: 700 13px Arial, sans-serif; fill: #1d2b4f; }
+    </style>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="1400" height="1040" rx="28"/>
+  <rect class="card" x="24" y="24" width="1352" height="992" rx="24"/>
+
+  <text class="title" x="60" y="78">iCargo Customer: What The Portal Actually Did</text>
+  <text class="subtitle" x="60" y="108">
+    <tspan x="60" y="108">This is the customer-side story to tell in interviews: customers could manage cards and package data,</tspan>
+    <tspan x="60" dy="22">fetch store orders, choose carriers, and turn one or many orders into shipments from the same portal.</tspan>
+  </text>
+
+  <rect class="card" x="60" y="150" width="620" height="314" rx="24"/>
+  <rect class="headBlue" x="60" y="150" width="620" height="56" rx="24"/>
+  <text class="chip" x="84" y="184">BOOKING AND CARRIER CHOICE</text>
+  <text class="section" x="90" y="246">Customer Shipping Flows</text>
+  <text class="small" x="90" y="286">• single booking page, quick import, and return shipment flows</text>
+  <text class="small" x="90" y="314">• create shipments from one order or many selected orders</text>
+  <text class="small" x="90" y="342">• choose services during booking from the same carrier family</text>
+  <rect x="90" y="372" width="84" height="28" rx="14" fill="#edf4ff" stroke="#bdd1f1"/>
+  <text class="pill" x="118" y="391">DHL</text>
+  <rect x="184" y="372" width="98" height="28" rx="14" fill="#edf4ff" stroke="#bdd1f1"/>
+  <text class="pill" x="206" y="391">UKMAIL</text>
+  <rect x="292" y="372" width="84" height="28" rx="14" fill="#edf4ff" stroke="#bdd1f1"/>
+  <text class="pill" x="320" y="391">DSV</text>
+  <rect x="386" y="372" width="84" height="28" rx="14" fill="#edf4ff" stroke="#bdd1f1"/>
+  <text class="pill" x="414" y="391">UPS</text>
+  <rect x="480" y="372" width="118" height="28" rx="14" fill="#edf4ff" stroke="#bdd1f1"/>
+  <text class="pill" x="502" y="391">PALLETWAYS</text>
+  <rect x="90" y="410" width="90" height="28" rx="14" fill="#ecfbf5" stroke="#bfe8d8"/>
+  <text class="pill" x="110" y="429">FEDEX</text>
+  <rect x="190" y="410" width="92" height="28" rx="14" fill="#ecfbf5" stroke="#bfe8d8"/>
+  <text class="pill" x="212" y="429">NORSK</text>
+  <rect x="292" y="410" width="80" height="28" rx="14" fill="#ecfbf5" stroke="#bfe8d8"/>
+  <text class="pill" x="318" y="429">DPD</text>
+  <rect x="382" y="410" width="88" height="28" rx="14" fill="#ecfbf5" stroke="#bfe8d8"/>
+  <text class="pill" x="404" y="429">ZAJEL</text>
+  <rect x="480" y="410" width="98" height="28" rx="14" fill="#ecfbf5" stroke="#bfe8d8"/>
+  <text class="pill" x="504" y="429">XPRESS</text>
+
+  <rect class="card" x="720" y="150" width="620" height="314" rx="24"/>
+  <rect class="headGreen" x="720" y="150" width="620" height="56" rx="24"/>
+  <text class="chip" x="744" y="184">ACCOUNT AND PACKAGE SETUP</text>
+  <text class="section" x="750" y="246">Customer Self-Service Tools</text>
+  <text class="small" x="750" y="286">• add card, prepay, add fund, and pay-invoice style actions</text>
+  <text class="small" x="750" y="314">• package list, package types, and package edit flows</text>
+  <text class="small" x="750" y="342">• SKU mapping connected to package data</text>
+  <text class="small" x="750" y="370">• addresses, users, printer setup, and account utilities</text>
+  <text class="small" x="750" y="398">• settings customers usually prepare before booking</text>
+
+  <rect class="card" x="60" y="500" width="620" height="314" rx="24"/>
+  <rect class="headGold" x="60" y="500" width="620" height="56" rx="24"/>
+  <text class="chip" x="84" y="534">STORE ORDERS AND COMMERCE</text>
+  <text class="section" x="90" y="596">Connected Commerce Workbench</text>
+  <text class="small" x="90" y="636">• cart-settings and shop connection style pages</text>
+  <text class="small" x="90" y="664">• fetch remote orders from connected stores</text>
+  <text class="small" x="90" y="692">• refresh, filter, and packaging-slip actions on order lists</text>
+  <text class="small" x="90" y="720">• evidence of Shopify, WooCommerce, eBay, and similar flows</text>
+  <text class="small" x="90" y="748">• use order data as the starting point for shipment booking</text>
+
+  <rect class="card" x="720" y="500" width="620" height="314" rx="24"/>
+  <rect class="headPurple" x="720" y="500" width="620" height="56" rx="24"/>
+  <text class="chip" x="744" y="534">BATCH, MULTI-ORDER, AND RULES</text>
+  <text class="section" x="750" y="596">Operational Actions From The Portal</text>
+  <text class="small" x="750" y="636">• create shipment from a normal single-order booking page</text>
+  <text class="small" x="750" y="664">• create shipment for multiple selected orders</text>
+  <text class="small" x="750" y="692">• batch orders and batch action flows</text>
+  <text class="small" x="750" y="720">• rule-based workflow configuration on the customer side</text>
+  <text class="small" x="750" y="748">• quotes, saved quotes, and invoice-linked actions</text>
+
+  <rect class="card" x="180" y="860" width="1040" height="130" rx="24"/>
+  <text class="section" x="210" y="916">Strong Interview Summary</text>
+  <text class="body" x="210" y="944">
+    <tspan x="210" y="944">iCargo Customer was not just a booking page. It was a customer workbench where users could add cards,</tspan>
+    <tspan x="210" dy="22">manage package lists, fetch Shopify or WooCommerce orders, choose carriers, create shipments</tspan>
+    <tspan x="210" dy="22">from one or many orders, and use batch, rules, quotes, and invoice flows.</tspan>
+  </text>
+</svg>

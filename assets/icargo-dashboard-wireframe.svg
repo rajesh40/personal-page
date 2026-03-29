@@ -1,0 +1,195 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1560 1040" role="img" aria-labelledby="title desc">
+  <title id="title">Portfolio dashboard wireframe with modules inside iCargo</title>
+  <desc id="desc">Wireframe showing vehicle inspection, rule engine, and rate engine directly inside the main iCargo card. Bagging is shown below as an independent project. icargo_customer is a separate card inside the iCargo ecosystem, below parcel-api.</desc>
+  <defs>
+    <style>
+      .bg { fill: #fbfcff; }
+      .frame { fill: none; stroke: #111827; stroke-width: 10; }
+      .group { fill: #f7f9fc; stroke: #111827; stroke-width: 8; rx: 24; ry: 24; }
+      .card { fill: #ffffff; stroke: #111827; stroke-width: 7; rx: 18; ry: 18; }
+      .module { fill: #ffffff; stroke: #111827; stroke-width: 6; rx: 14; ry: 14; }
+      .title { font: 700 28px Arial, sans-serif; fill: #111827; }
+      .sub { font: 600 18px Arial, sans-serif; fill: #111827; }
+      .small { font: 600 15px Arial, sans-serif; fill: #475569; }
+      .group-label { font: 700 18px Arial, sans-serif; fill: #0f4c81; }
+      .chip { fill: #eef4ff; stroke: #111827; stroke-width: 3; rx: 10; ry: 10; }
+      .chip-text { font: 700 12px Arial, sans-serif; fill: #0f4c81; }
+      .linkbox { fill: #eef4ff; stroke: #111827; stroke-width: 4; rx: 10; ry: 10; }
+      .linktext { font: 700 13px Arial, sans-serif; fill: #0f4c81; text-decoration: underline; }
+    </style>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="1560" height="1040" />
+  <rect class="frame" x="18" y="18" width="1524" height="1004" />
+
+  <text class="title" x="56" y="72">Modules moved inside iCargo</text>
+  <text class="small" x="56" y="102">Vehicle inspection, rule engine, and rate engine are shown inside the iCargo card. Bagging is shown below as an independent project.</text>
+
+  <text class="group-label" x="112" y="150">iCargo ecosystem</text>
+  <rect class="group" x="86" y="170" width="1388" height="410" />
+
+  <g id="icargo-card">
+    <rect class="card" x="118" y="206" width="950" height="220" />
+    <text class="title" x="593" y="246" text-anchor="middle">iCargo</text>
+    <text class="sub" x="593" y="274" text-anchor="middle">main product / internal operations dashboard</text>
+    <rect class="chip" x="510" y="288" width="90" height="28" />
+    <text class="chip-text" x="555" y="306" text-anchor="middle">AngularJS</text>
+    <rect class="chip" x="612" y="288" width="82" height="28" />
+    <text class="chip-text" x="653" y="306" text-anchor="middle">Ops UI</text>
+    <a href="icargo.html" target="_top">
+      <rect class="linkbox" x="912" y="220" width="120" height="34" />
+      <text class="linktext" x="972" y="242" text-anchor="middle">detail page</text>
+    </a>
+
+    <g id="vehicle-module">
+      <rect class="module" x="263" y="330" width="200" height="72" />
+      <text class="sub" x="363" y="360" text-anchor="middle">vehicle inspection</text>
+      <text class="small" x="363" y="382" text-anchor="middle">AngularJS</text>
+      <a href="vehicle-inspection.html" target="_top">
+        <rect class="linkbox" x="310" y="392" width="106" height="22" />
+        <text class="linktext" x="363" y="407" text-anchor="middle">detail page</text>
+      </a>
+    </g>
+
+    <g id="rule-module">
+      <rect class="module" x="493" y="330" width="200" height="72" />
+      <text class="sub" x="593" y="360" text-anchor="middle">rule engine</text>
+      <text class="small" x="593" y="382" text-anchor="middle">AngularJS</text>
+      <a href="rule-manager.html" target="_top">
+        <rect class="linkbox" x="540" y="392" width="106" height="22" />
+        <text class="linktext" x="593" y="407" text-anchor="middle">detail page</text>
+      </a>
+    </g>
+
+    <g id="rate-engine-module">
+      <rect class="module" x="723" y="330" width="200" height="72" />
+      <text class="sub" x="823" y="360" text-anchor="middle">rate engine</text>
+      <text class="small" x="823" y="382" text-anchor="middle">AngularJS</text>
+      <a href="rate-engine.html" target="_top">
+        <rect class="linkbox" x="770" y="392" width="106" height="22" />
+        <text class="linktext" x="823" y="407" text-anchor="middle">detail page</text>
+      </a>
+    </g>
+
+  </g>
+
+  <g id="parcel-api-card">
+    <rect class="card" x="1090" y="206" width="330" height="180" />
+    <text class="title" x="1255" y="264" text-anchor="middle">parcel-api</text>
+    <text class="sub" x="1255" y="294" text-anchor="middle">shared backend</text>
+    <rect class="chip" x="1165" y="316" width="46" height="28" />
+    <text class="chip-text" x="1188" y="334" text-anchor="middle">PHP</text>
+    <rect class="chip" x="1221" y="316" width="60" height="28" />
+    <text class="chip-text" x="1251" y="334" text-anchor="middle">Redis</text>
+    <rect class="chip" x="1291" y="316" width="72" height="28" />
+    <text class="chip-text" x="1327" y="334" text-anchor="middle">APIs</text>
+    <a href="parcel-api.html" target="_top">
+      <rect class="linkbox" x="1200" y="350" width="110" height="28" />
+      <text class="linktext" x="1255" y="368" text-anchor="middle">detail page</text>
+    </a>
+  </g>
+
+  <g id="icargo-customer-card">
+    <rect class="card" x="1090" y="412" width="330" height="140" />
+    <text class="title" x="1255" y="460" text-anchor="middle">icargo_customer</text>
+    <text class="small" x="1255" y="490" text-anchor="middle">customer-side project</text>
+    <rect class="chip" x="1155" y="504" width="54" height="28" />
+    <text class="chip-text" x="1182" y="522" text-anchor="middle">PHP</text>
+    <rect class="chip" x="1219" y="504" width="90" height="28" />
+    <text class="chip-text" x="1264" y="522" text-anchor="middle">Zend MVC</text>
+    <rect class="chip" x="1319" y="504" width="92" height="28" />
+    <text class="chip-text" x="1365" y="522" text-anchor="middle">Portal UI</text>
+    <a href="icargo-customer.html" target="_top">
+      <rect class="linkbox" x="1200" y="516" width="110" height="28" />
+      <text class="linktext" x="1255" y="534" text-anchor="middle">detail page</text>
+    </a>
+  </g>
+
+  <text class="group-label" x="112" y="624">Independent projects</text>
+
+  <g id="bagging-card">
+    <rect class="card" x="54" y="660" width="220" height="190" />
+    <text class="title" x="164" y="718" text-anchor="middle">bagging</text>
+    <text class="small" x="164" y="748" text-anchor="middle">independent project</text>
+    <rect class="chip" x="77" y="772" width="78" height="28" />
+    <text class="chip-text" x="116" y="790" text-anchor="middle">Next.js</text>
+    <rect class="chip" x="163" y="772" width="88" height="28" />
+    <text class="chip-text" x="207" y="790" text-anchor="middle">TypeScript</text>
+    <a href="bagging.html" target="_top">
+      <rect class="linkbox" x="94" y="812" width="140" height="28" />
+      <text class="linktext" x="164" y="830" text-anchor="middle">detail page</text>
+    </a>
+  </g>
+
+  <g id="route-manager-card">
+    <rect class="card" x="292" y="660" width="220" height="190" />
+    <text class="title" x="402" y="718" text-anchor="middle">route manager</text>
+    <text class="small" x="402" y="748" text-anchor="middle">independent project</text>
+    <rect class="chip" x="315" y="772" width="78" height="28" />
+    <text class="chip-text" x="354" y="790" text-anchor="middle">Next.js</text>
+    <rect class="chip" x="401" y="772" width="72" height="28" />
+    <text class="chip-text" x="437" y="790" text-anchor="middle">Redux</text>
+    <a href="route-manager.html" target="_top">
+      <rect class="linkbox" x="332" y="812" width="140" height="28" />
+      <text class="linktext" x="402" y="830" text-anchor="middle">detail page</text>
+    </a>
+  </g>
+
+  <g id="inventory-card">
+    <rect class="card" x="530" y="660" width="220" height="190" />
+    <text class="title" x="640" y="706" text-anchor="middle">inventory</text>
+    <text class="title" x="640" y="738" text-anchor="middle">management</text>
+    <text class="small" x="640" y="766" text-anchor="middle">independent project</text>
+    <rect class="chip" x="553" y="782" width="78" height="28" />
+    <text class="chip-text" x="592" y="800" text-anchor="middle">Next.js</text>
+    <rect class="chip" x="639" y="782" width="74" height="28" />
+    <text class="chip-text" x="676" y="800" text-anchor="middle">Prisma</text>
+    <a href="inventory-management.html" target="_top">
+      <rect class="linkbox" x="570" y="812" width="140" height="28" />
+      <text class="linktext" x="640" y="830" text-anchor="middle">detail page</text>
+    </a>
+  </g>
+
+  <g id="onboarding-card">
+    <rect class="card" x="768" y="660" width="220" height="190" />
+    <text class="title" x="878" y="718" text-anchor="middle">onboarding</text>
+    <text class="small" x="878" y="748" text-anchor="middle">independent project</text>
+    <rect class="chip" x="791" y="772" width="78" height="28" />
+    <text class="chip-text" x="830" y="790" text-anchor="middle">Next.js</text>
+    <rect class="chip" x="877" y="772" width="84" height="28" />
+    <text class="chip-text" x="919" y="790" text-anchor="middle">Sequelize</text>
+    <a href="onboarding.html" target="_top">
+      <rect class="linkbox" x="808" y="812" width="140" height="28" />
+      <text class="linktext" x="878" y="830" text-anchor="middle">detail page</text>
+    </a>
+  </g>
+
+  <g id="linnworks-card">
+    <rect class="card" x="1006" y="660" width="220" height="190" />
+    <text class="title" x="1116" y="718" text-anchor="middle">linnworks</text>
+    <text class="small" x="1116" y="748" text-anchor="middle">independent project</text>
+    <rect class="chip" x="1029" y="772" width="76" height="28" />
+    <text class="chip-text" x="1067" y="790" text-anchor="middle">NestJS</text>
+    <rect class="chip" x="1113" y="772" width="84" height="28" />
+    <text class="chip-text" x="1155" y="790" text-anchor="middle">TypeORM</text>
+    <a href="linnworks.html" target="_top">
+      <rect class="linkbox" x="1046" y="812" width="140" height="28" />
+      <text class="linktext" x="1116" y="830" text-anchor="middle">detail page</text>
+    </a>
+  </g>
+
+  <g id="webhook-worker-card">
+    <rect class="card" x="1244" y="660" width="220" height="190" />
+    <text class="title" x="1354" y="706" text-anchor="middle">webhook</text>
+    <text class="title" x="1354" y="738" text-anchor="middle">worker</text>
+    <text class="small" x="1354" y="766" text-anchor="middle">independent project</text>
+    <rect class="chip" x="1267" y="782" width="76" height="28" />
+    <text class="chip-text" x="1305" y="800" text-anchor="middle">NestJS</text>
+    <rect class="chip" x="1351" y="782" width="66" height="28" />
+    <text class="chip-text" x="1384" y="800" text-anchor="middle">Redis</text>
+    <a href="webhook-worker.html" target="_top">
+      <rect class="linkbox" x="1284" y="812" width="140" height="28" />
+      <text class="linktext" x="1354" y="830" text-anchor="middle">detail page</text>
+    </a>
+  </g>
+</svg>

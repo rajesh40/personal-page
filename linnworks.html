@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Linnworks | Rajesh Kumar</title>
+    <link rel="stylesheet" href="styles/sketch.css" />
+  </head>
+  <body>
+    <div class="page-wrap">
+      <div class="frame">
+        <aside class="sidebar">
+          <nav class="sidebar-box">
+            <p class="box-title">Dashboard Map</p>
+            <div class="project-nav-list">
+              <a class="project-link" href="index.html">Home</a>
+              <a class="project-link" href="icargo.html">iCargo</a>
+              <a class="project-link" href="parcel-api.html">parcel-api</a>
+              <a class="project-link" href="icargo-customer.html">iCargo Customer</a>
+              <a class="project-link" href="vehicle-inspection.html">Vehicle Inspection</a>
+              <a class="project-link" href="rule-manager.html">Rule Engine</a>
+              <a class="project-link" href="rate-engine.html">Rate Engine</a>
+              <a class="project-link" href="bagging.html">Bagging</a>
+              <a class="project-link" href="route-manager.html">Route Manager</a>
+              <a class="project-link" href="inventory-management.html">Inventory Management</a>
+              <a class="project-link" href="onboarding.html">Onboarding</a>
+              <a class="project-link active" href="linnworks.html">Linnworks</a>
+              <a class="project-link" href="webhook-worker.html">Webhook Worker</a>
+              <a class="project-link" href="chat.html">Chat</a>
+              <a class="project-link" href="order-integrations.html">Third Party Order Fetch</a>
+              <a class="project-link" href="batch-operations.html">Batch Operations</a>
+              <a class="project-link" href="chargebee-cart.html">Chargebee Cart</a>
+            </div>
+          </nav>
+        </aside>
+
+        <main class="content">
+          <section class="content-head">
+            <p class="label">Independent Project</p>
+            <h2 class="page-title">Linnworks</h2>
+            <p class="summary-text">
+              Linnworks was an independently deployed integration microservice that handled Linnworks-specific config,
+              request transformation, label-generation flow, and cancellation mapping.
+            </p>
+          </section>
+
+          <section class="content-grid">
+            <article class="content-box full">
+              <h2>Visual Overview</h2>
+              <div class="media-shell">
+                <div class="media-stage">
+                  <img
+                    class="media-image media-image--static"
+                    src="assets/project-svg/linnworks-integration-overview.svg"
+                    alt="Linnworks integration overview"
+                  />
+                </div>
+                <p class="media-caption">
+                  Reference visual showing the Linnworks integration flow and downstream service boundaries.
+                </p>
+              </div>
+            </article>
+
+            <article class="content-box">
+              <h2>Why It Matters</h2>
+              <p class="detail-text">
+                This is a strong backend integration story: external API orchestration, mapping between system contracts,
+                and independent service ownership.
+              </p>
+            </article>
+
+            <article class="content-box">
+              <h2>Tech Stack</h2>
+              <ul class="detail-list">
+                <li>NestJS microservice</li>
+                <li>TypeORM data and mapping layer</li>
+                <li>external API integration</li>
+                <li>downstream booking dependency on parcel-api</li>
+              </ul>
+            </article>
+
+            <article class="content-box">
+              <h2>What I Worked On</h2>
+              <ul class="detail-list">
+                <li>authentication and request orchestration with Linnworks APIs</li>
+                <li>data transformation into downstream booking format</li>
+                <li>label and document conversion flow</li>
+                <li>persistent identity mapping for later cancellation</li>
+              </ul>
+            </article>
+
+            <article class="content-box">
+              <h2>Related Pages</h2>
+              <p class="detail-text">
+                The runtime picture is Linnworks UI on one side and our NestJS service plus shared backend on the other.
+              </p>
+              <div class="link-list">
+                <a href="parcel-api.html">Open parcel-api</a>
+                <a href="webhook-worker.html">Open Webhook Worker</a>
+              </div>
+            </article>
+          </section>
+
+          <footer class="footer-row">
+            <a class="footer-link" href="onboarding.html">Previous: Onboarding</a>
+            <a class="footer-link" href="webhook-worker.html">Next: Webhook Worker</a>
+          </footer>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

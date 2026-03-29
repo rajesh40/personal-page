@@ -3,129 +3,301 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rajesh Kumar | Backend Portfolio</title>
+    <title>Rajesh Kumar | Product And Project Dashboard</title>
     <link rel="stylesheet" href="styles/sketch.css" />
   </head>
   <body>
-    <div class="page-wrap">
-      <main class="home-shell">
+    <div class="page-wrap page-wrap--home">
+      <main class="home-shell dashboard-home">
         <section class="home-top">
-          <div class="mini-profile">
-            <div class="mini-photo">
-              <img
-                class="profile-image"
-                src="assets/profile-photo.png"
-                alt="Rajesh Kumar profile photo"
-                onerror="
-                  this.style.display = 'none';
-                  this.nextElementSibling.style.display = 'grid';
-                "
-              />
-              <div class="photo-slot photo-fallback">
-                Add profile photo file at<br />
-                assets/profile-photo.png
+          <div class="home-top-main">
+            <div class="mini-profile">
+              <div class="mini-photo">
+                <img
+                  class="profile-image"
+                  src="assets/profile-photo.png"
+                  alt="Rajesh Kumar profile photo"
+                  onerror="
+                    this.style.display = 'none';
+                    this.nextElementSibling.style.display = 'grid';
+                  "
+                />
+                <div class="photo-slot photo-fallback">
+                  Add profile photo file at<br />
+                  assets/profile-photo.png
+                </div>
+              </div>
+              <div class="mini-profile-copy">
+                <h1 class="home-name">Rajesh Kumar</h1>
+                <p class="home-role">Backend-Focused Full Stack Developer</p>
+                <div class="header-meta" aria-label="Stack overview">
+                  <span class="header-meta-label">Stack</span>
+                  <span class="header-meta-group"
+                    ><strong>Modern:</strong> NestJS, Next.js, TypeScript, Redis, Prisma, TypeORM, PostgreSQL, Redux</span
+                  >
+                  <span class="header-meta-divider">|</span>
+                  <span class="header-meta-group"
+                    ><strong>Legacy:</strong> AngularJS, PHP, Zend MVC</span
+                  >
+                </div>
               </div>
             </div>
-            <div class="mini-profile-copy">
-              <p class="label">Backend Portfolio</p>
-              <h1 class="home-name">Rajesh Kumar</h1>
-              <p class="home-role">Backend Developer (Node.js / TypeScript)</p>
-            </div>
           </div>
 
-          <div class="mini-contact">
-            <a href="tel:+918470873414">8470873414</a>
-            <a href="mailto:mcarajeshkumar40@gmail.com"
-              >mcarajeshkumar40@gmail.com</a
-            >
+          <div class="home-top-side">
+            <div class="mini-contact">
+              <a href="tel:+918470873414">8470873414</a>
+              <a href="mailto:mcarajeshkumar40@gmail.com"
+                >mcarajeshkumar40@gmail.com</a
+              >
+            </div>
           </div>
         </section>
 
-        <section class="home-intro">
-          <p class="label">Portfolio Home</p>
-          <h2 class="page-title">Project Showcase</h2>
-          <p class="summary-text">
-            Production-focused portfolio for backend-heavy product work across
-            logistics, workflows, integrations, and billing systems.
-          </p>
-        </section>
+        <div class="dashboard-scroll">
 
-        <section class="showcase-grid">
-          <article class="showcase-card">
-            <h2>Vehicle Inspection</h2>
-            <p class="detail-text">
-              Inspection workflow, form handling, validation, and operational
-              process logic.
-            </p>
-            <div class="link-list">
-              <a href="vehicle-inspection.html">Open Project</a>
+          <section class="dashboard-section dashboard-section--toggle">
+            <details class="dashboard-toggle">
+              <summary class="dashboard-toggle-summary">
+                <span class="dashboard-toggle-title">iCargo ecosystem</span>
+                <span class="dashboard-toggle-copy">Main product, shared backend, and customer portal</span>
+                <span class="dashboard-toggle-action">
+                  <span class="toggle-closed">Show details</span>
+                  <span class="toggle-open">Hide details</span>
+                </span>
+              </summary>
+
+              <div class="dashboard-toggle-body">
+                <div class="ecosystem-board">
+                  <article class="project-card project-card--hero">
+                    <div class="card-header">
+                      <div>
+                        <p class="card-topline">Main product</p>
+                        <h3 class="card-title">
+                          <a class="card-title-link" href="icargo.html">iCargo</a>
+                        </h3>
+                        <p class="card-summary">
+                          Internal logistics operations product for booking, routing, pricing,
+                          customer setup, labels, logs, and daily shipment workflows.
+                        </p>
+                      </div>
+                    </div>
+
+                    <div class="chip-row">
+                      <span class="tech-chip">AngularJS</span>
+                      <span class="tech-chip">Multi-carrier</span>
+                    </div>
+
+                    <div class="module-grid">
+                      <article class="module-card">
+                        <p class="card-topline">Module</p>
+                        <h4 class="module-title">
+                          <a class="card-title-link" href="vehicle-inspection.html">Vehicle Inspection</a>
+                        </h4>
+                        <p class="module-copy">Inspection and validation workflow inside the operations product.</p>
+                      </article>
+
+                      <article class="module-card">
+                        <p class="card-topline">Module</p>
+                        <h4 class="module-title">
+                          <a class="card-title-link" href="rule-manager.html">Rule Engine</a>
+                        </h4>
+                        <p class="module-copy">Business-rule configuration and filter-driven workflow behavior.</p>
+                      </article>
+
+                      <article class="module-card">
+                        <p class="card-topline">Module</p>
+                        <h4 class="module-title">
+                          <a class="card-title-link" href="rate-engine.html">Rate Engine</a>
+                        </h4>
+                        <p class="module-copy">Carrier accounts, service mapping, pricing setup, and surcharge rules.</p>
+                      </article>
+                    </div>
+                  </article>
+
+                  <div class="ecosystem-side">
+                    <article class="project-card project-card--system">
+                      <div class="card-header">
+                        <div>
+                          <p class="card-topline">Shared backend</p>
+                          <h3 class="card-title card-title--compact">
+                            <a class="card-title-link" href="parcel-api.html">parcel-api</a>
+                          </h3>
+                          <p class="card-summary">
+                            Central business API behind both the internal product and the customer portal.
+                          </p>
+                        </div>
+                      </div>
+                      <div class="chip-row">
+                        <span class="tech-chip">PHP</span>
+                        <span class="tech-chip">Redis</span>
+                        <span class="tech-chip">Booking APIs</span>
+                        <span class="tech-chip">Order ingestion</span>
+                      </div>
+                    </article>
+
+                    <article class="project-card project-card--system">
+                      <div class="card-header">
+                        <div>
+                          <p class="card-topline">Customer-side project</p>
+                          <h3 class="card-title card-title--compact">
+                            <a class="card-title-link" href="icargo-customer.html">icargo_customer</a>
+                          </h3>
+                          <p class="card-summary">
+                            Customer portal for bookings, connected-store orders, batch flows, and account setup.
+                          </p>
+                        </div>
+                      </div>
+                      <div class="chip-row">
+                        <span class="tech-chip">PHP</span>
+                        <span class="tech-chip">Zend MVC</span>
+                        <span class="tech-chip">Portal UI</span>
+                        <span class="tech-chip">Order sync</span>
+                      </div>
+                    </article>
+                  </div>
+                </div>
+              </div>
+            </details>
+          </section>
+
+          <section class="dashboard-section">
+            <div class="section-head section-head--tight">
+              <div>
+                <p class="label">Independent Work</p>
+                <h2 class="section-title">Independent Projects</h2>
+              </div>
             </div>
-          </article>
 
-          <article class="showcase-card">
-            <h2>Rule Manager</h2>
-            <p class="detail-text">
-              Business-rule configuration, automated workflow behavior, and
-              filter-driven operations.
-            </p>
-            <div class="link-list">
-              <a href="rule-manager.html">Open Project</a>
+            <div class="project-grid">
+              <article class="project-card project-card--compact">
+                <p class="card-topline">Independent project</p>
+                <h3 class="card-title card-title--compact">
+                  <a class="card-title-link" href="bagging.html">Bagging</a>
+                </h3>
+                <p class="card-summary">
+                  Next.js shipment-grouping workflow with API-backed bag creation and typed process flow.
+                </p>
+                <div class="chip-row">
+                  <span class="tech-chip">Next.js</span>
+                  <span class="tech-chip">TypeScript</span>
+                  <span class="tech-chip">Redux</span>
+                </div>
+              </article>
+
+              <article class="project-card project-card--compact">
+                <p class="card-topline">Independent project</p>
+                <h3 class="card-title card-title--compact">
+                  <a class="card-title-link" href="route-manager.html">Route Manager</a>
+                </h3>
+                <p class="card-summary">
+                  Map-driven route planning with optimization flow, controller actions, and live operational state.
+                </p>
+                <div class="chip-row">
+                  <span class="tech-chip">Next.js</span>
+                  <span class="tech-chip">Redux</span>
+                  <span class="tech-chip">MQTT</span>
+                </div>
+              </article>
+
+              <article class="project-card project-card--compact">
+                <p class="card-topline">Independent project</p>
+                <h3 class="card-title card-title--compact">
+                  <a class="card-title-link" href="inventory-management.html">Inventory Management</a>
+                </h3>
+                <p class="card-summary">
+                  Full-stack stockroom operations platform connecting inventory, orders, jobs, and replenishment.
+                </p>
+                <div class="chip-row">
+                  <span class="tech-chip">Next.js</span>
+                  <span class="tech-chip">Prisma</span>
+                  <span class="tech-chip">PostgreSQL</span>
+                </div>
+              </article>
+
+              <article class="project-card project-card--compact">
+                <p class="card-topline">Independent project</p>
+                <h3 class="card-title card-title--compact">
+                  <a class="card-title-link" href="onboarding.html">Onboarding</a>
+                </h3>
+                <p class="card-summary">
+                  Full-stack onboarding flow with email verification, token handling, uploads, and callback support.
+                </p>
+                <div class="chip-row">
+                  <span class="tech-chip">Next.js</span>
+                  <span class="tech-chip">API Routes</span>
+                  <span class="tech-chip">Token flows</span>
+                </div>
+              </article>
+
+              <article class="project-card project-card--compact">
+                <p class="card-topline">Independent project</p>
+                <h3 class="card-title card-title--compact">
+                  <a class="card-title-link" href="linnworks.html">Linnworks</a>
+                </h3>
+                <p class="card-summary">
+                  Independently deployed integration microservice for Linnworks orchestration and downstream booking calls.
+                </p>
+                <div class="chip-row">
+                  <span class="tech-chip">NestJS</span>
+                  <span class="tech-chip">TypeORM</span>
+                  <span class="tech-chip">External APIs</span>
+                </div>
+              </article>
+
+              <article class="project-card project-card--compact">
+                <p class="card-topline">Independent project</p>
+                <h3 class="card-title card-title--compact">
+                  <a class="card-title-link" href="webhook-worker.html">Webhook Worker</a>
+                </h3>
+                <p class="card-summary">
+                  Event-driven NestJS worker consuming Redis Streams with retry and dead-letter handling.
+                </p>
+                <div class="chip-row">
+                  <span class="tech-chip">NestJS</span>
+                  <span class="tech-chip">Redis</span>
+                  <span class="tech-chip">TypeORM</span>
+                </div>
+              </article>
+
+              <article class="project-card project-card--compact">
+                <p class="card-topline">Independent project</p>
+                <h3 class="card-title card-title--compact">
+                  <a class="card-title-link" href="chat.html">Chat</a>
+                </h3>
+                <p class="card-summary">
+                  Realtime controller-driver communication service with live delivery, stored history, unread-state handling,
+                  and presence updates.
+                </p>
+                <div class="chip-row">
+                  <span class="tech-chip">Express</span>
+                  <span class="tech-chip">Socket.IO</span>
+                  <span class="tech-chip">Firebase</span>
+                </div>
+              </article>
             </div>
-          </article>
+          </section>
 
-          <article class="showcase-card">
-            <h2>Batch</h2>
-            <p class="detail-text">
-              Grouped order or booking handling for bulk operational workflows
-              and staged processing.
-            </p>
-            <div class="link-list">
-              <a href="batch-operations.html">Open Project</a>
+          <section class="extra-pages">
+            <div class="section-head section-head--tight">
+              <div>
+                <p class="label">Additional Public Pages</p>
+                <h2 class="section-title">Other Modules And References</h2>
+              </div>
+              <p class="section-note">
+                Kept separate from the main dashboard map, but still public in this portfolio.
+              </p>
             </div>
-          </article>
 
-          <article class="showcase-card">
-            <h2>Third Party Order Fetch</h2>
-            <p class="detail-text">
-              External order sync and internal order-processing flow from
-              third-party channels.
-            </p>
-            <div class="link-list">
-              <a href="order-integrations.html">Open Project</a>
+            <div class="extra-links">
+              <a href="order-integrations.html">Third Party Order Fetch</a>
+              <a href="batch-operations.html">Batch Operations</a>
+              <a href="chargebee-cart.html">Chargebee Cart And Payments</a>
+              <a href="media-guide.html">Media Guide</a>
             </div>
-          </article>
+          </section>
+        </div>
 
-          <article class="showcase-card">
-            <h2>Bagging</h2>
-            <p class="detail-text">
-              Bagging and grouped shipment workflow in logistics operations and
-              handling flow.
-            </p>
-            <div class="link-list">
-              <a href="bagging.html">Open Project</a>
-            </div>
-          </article>
-
-          <article class="showcase-card">
-            <h2>Chargebee Cart and Payments</h2>
-            <p class="detail-text">
-              Cart, billing, and payment workflow tied to Chargebee-based
-              subscription handling.
-            </p>
-            <div class="link-list">
-              <a href="chargebee-cart.html">Open Project</a>
-            </div>
-          </article>
-        </section>
-
-        <footer class="footer-row home-footer">
-          <span class="footer-link"
-            >Projects are the primary focus of this portfolio.</span
-          >
-          <a class="footer-link" href="rule-manager.html"
-            >Start With Rule Manager</a
-          >
-        </footer>
       </main>
     </div>
   </body>

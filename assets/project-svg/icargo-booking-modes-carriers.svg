@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1380" height="980" viewBox="0 0 1380 980" role="img" aria-labelledby="title desc">
+  <title id="title">iCargo booking modes and carriers</title>
+  <desc id="desc">Product-first visual for iCargo showing booking modes, shipment inputs, carrier choices, and operational screens without backend communication details.</desc>
+  <defs>
+    <style>
+      .bg { fill: #f4f7fd; }
+      .panel { fill: #ffffff; stroke: #d7e1f2; stroke-width: 2; }
+      .headBlue { fill: #1f5ca8; }
+      .headGreen { fill: #12936a; }
+      .headGold { fill: #d88614; }
+      .headPurple { fill: #6b4aa8; }
+      .headCoral { fill: #d95c49; }
+      .title { font: 700 28px Arial, sans-serif; fill: #1d2b4f; }
+      .subtitle { font: 400 15px Arial, sans-serif; fill: #5d6d8c; }
+      .section { font: 700 22px Arial, sans-serif; fill: #1d2b4f; }
+      .body { font: 600 15px Arial, sans-serif; fill: #23304f; }
+      .small { font: 400 14px Arial, sans-serif; fill: #46556f; }
+      .chip { font: 700 12px Arial, sans-serif; fill: #ffffff; }
+      .pill { font: 700 13px Arial, sans-serif; fill: #1d2b4f; }
+    </style>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="1380" height="980" rx="28"/>
+  <rect class="panel" x="24" y="24" width="1332" height="932" rx="24"/>
+
+  <text class="title" x="60" y="78">iCargo: Booking Modes And Multi-Carrier Operations</text>
+  <text class="subtitle" x="60" y="108">
+    <tspan x="60" y="108">This view keeps the story product-first: what operations users actually did inside iCargo, which booking modes</tspan>
+    <tspan x="60" dy="22">they used, which shipment details they managed, and which carriers they could book with.</tspan>
+  </text>
+
+  <rect class="panel" x="60" y="150" width="390" height="292" rx="24"/>
+  <rect class="headBlue" x="60" y="150" width="390" height="56" rx="24"/>
+  <text class="chip" x="84" y="184">BOOKING MODES</text>
+  <text class="section" x="90" y="246">Main Job Types</text>
+  <text class="small" x="90" y="286">• single booking for one shipment</text>
+  <text class="small" x="90" y="314">• multi-drop booking for one job with many drops</text>
+  <text class="small" x="90" y="342">• same-day job for urgent controller workflows</text>
+  <text class="small" x="90" y="370">• next-day parcel and next-day job flows</text>
+  <text class="small" x="90" y="398">• quick-book variants for faster repeat operations</text>
+
+  <rect class="panel" x="495" y="150" width="390" height="292" rx="24"/>
+  <rect class="headGreen" x="495" y="150" width="390" height="56" rx="24"/>
+  <text class="chip" x="519" y="184">BOOKING WORKBENCH</text>
+  <text class="section" x="525" y="246">What Users Managed</text>
+  <text class="small" x="525" y="286">• customer, account, branch, and warehouse context</text>
+  <text class="small" x="525" y="314">• pickup and delivery address details</text>
+  <text class="small" x="525" y="342">• parcel, pallet, weight, and package information</text>
+  <text class="small" x="525" y="370">• service, surcharge, and booking options</text>
+  <text class="small" x="525" y="398">• labels, tracking follow-up, and booking exceptions</text>
+
+  <rect class="panel" x="930" y="150" width="390" height="292" rx="24"/>
+  <rect class="headGold" x="930" y="150" width="390" height="56" rx="24"/>
+  <text class="chip" x="954" y="184">CARRIER CHOICE</text>
+  <text class="section" x="960" y="246">Multi-Carrier Surface</text>
+  <text class="small" x="960" y="282">The same product supported multiple carrier options.</text>
+  <rect x="960" y="308" width="92" height="30" rx="15" fill="#edf4ff" stroke="#bdd1f1"/>
+  <text class="pill" x="992" y="328">DHL</text>
+  <rect x="1064" y="308" width="108" height="30" rx="15" fill="#edf4ff" stroke="#bdd1f1"/>
+  <text class="pill" x="1088" y="328">UKMAIL</text>
+  <rect x="1184" y="308" width="92" height="30" rx="15" fill="#edf4ff" stroke="#bdd1f1"/>
+  <text class="pill" x="1216" y="328">DSV</text>
+  <rect x="960" y="350" width="92" height="30" rx="15" fill="#ecfbf5" stroke="#bfe8d8"/>
+  <text class="pill" x="992" y="370">UPS</text>
+  <rect x="1064" y="350" width="124" height="30" rx="15" fill="#ecfbf5" stroke="#bfe8d8"/>
+  <text class="pill" x="1086" y="370">PALLETWAYS</text>
+  <rect x="1200" y="350" width="92" height="30" rx="15" fill="#ecfbf5" stroke="#bfe8d8"/>
+  <text class="pill" x="1220" y="370">FEDEX</text>
+  <rect x="960" y="392" width="98" height="30" rx="15" fill="#fff7ec" stroke="#efcf9e"/>
+  <text class="pill" x="982" y="412">NORSK</text>
+  <rect x="1070" y="392" width="88" height="30" rx="15" fill="#fff7ec" stroke="#efcf9e"/>
+  <text class="pill" x="1096" y="412">DPD</text>
+  <rect x="1170" y="392" width="96" height="30" rx="15" fill="#fff7ec" stroke="#efcf9e"/>
+  <text class="pill" x="1194" y="412">ZAJEL</text>
+  <rect x="1278" y="392" width="18" height="30" rx="9" fill="#fff7ec" stroke="#efcf9e"/>
+  <rect x="960" y="434" width="120" height="30" rx="15" fill="#f7edff" stroke="#d6c3f5"/>
+  <text class="pill" x="978" y="454">XPRESS</text>
+  <text class="small" x="1096" y="454">style setups</text>
+
+  <rect class="panel" x="60" y="490" width="600" height="260" rx="24"/>
+  <rect class="headPurple" x="60" y="490" width="600" height="56" rx="24"/>
+  <text class="chip" x="84" y="524">OTHER IMPORTANT SCREENS</text>
+  <text class="section" x="90" y="586">Operations Beyond Booking</text>
+  <text class="small" x="90" y="626">• shipment dashboards and all-shipment views</text>
+  <text class="small" x="90" y="654">• routes, prepared routes, and assignment workflows</text>
+  <text class="small" x="90" y="682">• customers, branches, hubs, controllers, drivers, and vehicles</text>
+  <text class="small" x="90" y="710">• pricing, surcharges, labels, logs, notifications, and webhooks</text>
+
+  <rect class="panel" x="720" y="490" width="600" height="260" rx="24"/>
+  <rect class="headCoral" x="720" y="490" width="600" height="56" rx="24"/>
+  <text class="chip" x="744" y="524">HOW A USER ACTUALLY WORKED</text>
+  <text class="section" x="750" y="586">Typical Booking Path</text>
+  <text class="small" x="750" y="626">1. open same-day, next-day, single, or multi-drop booking</text>
+  <text class="small" x="750" y="654">2. choose customer and pickup or delivery details</text>
+  <text class="small" x="750" y="682">3. enter parcel, pallet, and service information</text>
+  <text class="small" x="750" y="710">4. pick the right carrier and continue with label, tracking, or route follow-up</text>
+
+  <rect class="panel" x="140" y="800" width="1100" height="136" rx="24"/>
+  <text class="section" x="170" y="856">Strong Interview Summary</text>
+  <text class="body" x="170" y="884">
+    <tspan x="170" y="884">iCargo was not just an admin panel. It was the internal logistics operations product where teams</tspan>
+    <tspan x="170" dy="22">created same-day and next-day jobs, handled single and multi-drop bookings, chose carriers,</tspan>
+    <tspan x="170" dy="22">and continued into routes, shipments, pricing, and operational settings.</tspan>
+  </text>
+</svg>

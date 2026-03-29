@@ -1,0 +1,165 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1120" viewBox="0 0 1600 1120" role="img" aria-labelledby="title desc">
+  <title id="title">Chat Realtime Overview</title>
+  <desc id="desc">A conceptual view of the chat project showing the controller chat console, driver-side communication, Socket.IO live delivery, Mongo persistence, MySQL metadata, and Firebase unread notification state.</desc>
+
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f5f8fd"/>
+      <stop offset="100%" stop-color="#edf3fb"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#fbfdff"/>
+    </linearGradient>
+    <linearGradient id="chrome" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#214f95"/>
+      <stop offset="100%" stop-color="#173d75"/>
+    </linearGradient>
+    <style>
+      .title { font: 700 36px 'Segoe UI', Arial, sans-serif; fill: #14213d; }
+      .subtitle { font: 500 18px 'Segoe UI', Arial, sans-serif; fill: #5b6f8c; }
+      .app-title { font: 700 24px 'Segoe UI', Arial, sans-serif; fill: #ffffff; }
+      .section { font: 700 20px 'Segoe UI', Arial, sans-serif; fill: #173153; }
+      .meta { font: 700 12px 'Segoe UI', Arial, sans-serif; fill: #617493; letter-spacing: 0.8px; }
+      .body { font: 500 16px 'Segoe UI', Arial, sans-serif; fill: #2e425f; }
+      .small { font: 500 14px 'Segoe UI', Arial, sans-serif; fill: #617391; }
+      .tiny { font: 700 12px 'Segoe UI', Arial, sans-serif; fill: #627593; }
+      .badge { font: 700 14px 'Segoe UI', Arial, sans-serif; fill: #ffffff; }
+      .button { font: 700 14px 'Segoe UI', Arial, sans-serif; fill: #ffffff; }
+      .button-alt { font: 700 14px 'Segoe UI', Arial, sans-serif; fill: #214f95; }
+      .chip { font: 700 12px 'Segoe UI', Arial, sans-serif; fill: #214f95; }
+      .mono { font: 600 13px 'Consolas', 'Courier New', monospace; fill: #49617b; }
+    </style>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#214f95"/>
+    </marker>
+  </defs>
+
+  <rect width="1600" height="1120" fill="url(#bg)"/>
+  <rect x="28" y="24" width="1544" height="1072" rx="28" fill="#ffffff" stroke="#d8e2f2"/>
+
+  <text x="72" y="86" class="title">Chat: Controller, Driver, and Realtime Backend</text>
+  <text x="72" y="118" class="subtitle">A practical view of the controller-to-driver chat system: live message delivery, persisted history, driver presence, unread counters, and mixed backend storage.</text>
+
+  <g>
+    <rect x="70" y="170" width="830" height="618" rx="28" fill="url(#panel)" stroke="#d9e4f3"/>
+    <rect x="70" y="170" width="830" height="70" rx="28" fill="url(#chrome)"/>
+    <text x="104" y="214" class="app-title">Controller Chat Console</text>
+
+    <rect x="94" y="262" width="250" height="494" rx="22" fill="#f9fbff" stroke="#dce6f3"/>
+    <text x="120" y="298" class="section">Driver List</text>
+    <text x="120" y="320" class="meta">SEARCH, LAST MESSAGE, UNREAD BADGE</text>
+
+    <rect x="120" y="344" width="198" height="38" rx="12" fill="#ffffff" stroke="#dce6f3"/>
+    <text x="146" y="368" class="small">Search Driver...</text>
+
+    <rect x="120" y="404" width="198" height="78" rx="16" fill="#ffffff" stroke="#dce6f3"/>
+    <circle cx="154" cy="442" r="18" fill="#214f95"/>
+    <text x="148" y="448" class="badge">RA</text>
+    <text x="182" y="438" class="body">Ravi Driver</text>
+    <text x="182" y="462" class="small">Reached site, unloading now.</text>
+    <rect x="286" y="418" width="18" height="18" rx="9" fill="#13a27a"/>
+    <text x="290" y="431" class="badge">2</text>
+
+    <rect x="120" y="498" width="198" height="78" rx="16" fill="#ffffff" stroke="#dce6f3"/>
+    <circle cx="154" cy="536" r="18" fill="#6d59d8"/>
+    <text x="148" y="542" class="badge">NI</text>
+    <text x="182" y="532" class="body">Nina Driver</text>
+    <text x="182" y="556" class="small">Need route clarification.</text>
+
+    <rect x="120" y="592" width="198" height="78" rx="16" fill="#ffffff" stroke="#dce6f3"/>
+    <circle cx="154" cy="630" r="18" fill="#f08a24"/>
+    <text x="148" y="636" class="badge">MO</text>
+    <text x="182" y="626" class="body">Mo Driver</text>
+    <text x="182" y="650" class="small">Offline</text>
+
+    <rect x="372" y="262" width="500" height="494" rx="22" fill="#f9fbff" stroke="#dce6f3"/>
+    <text x="400" y="298" class="section">Conversation</text>
+    <text x="400" y="320" class="meta">LIVE CHAT PLUS PERSISTED HISTORY</text>
+
+    <rect x="398" y="344" width="448" height="56" rx="16" fill="#ffffff" stroke="#dce6f3"/>
+    <circle cx="432" cy="372" r="18" fill="#214f95"/>
+    <text x="426" y="378" class="badge">RA</text>
+    <text x="460" y="366" class="body">Ravi Driver</text>
+    <text x="460" y="388" class="small">Online</text>
+
+    <rect x="418" y="430" width="220" height="66" rx="18" fill="#214f95"/>
+    <text x="440" y="458" class="button">Pickup finished?</text>
+    <text x="440" y="480" class="small" fill="#dce8ff">Controller • 10:22 AM</text>
+
+    <rect x="606" y="516" width="214" height="74" rx="18" fill="#eaf4ff" stroke="#d5e6fb"/>
+    <text x="628" y="546" class="body">Reached site, unloading now.</text>
+    <text x="628" y="570" class="small">Driver • 10:23 AM</text>
+
+    <rect x="418" y="614" width="252" height="74" rx="18" fill="#214f95"/>
+    <text x="440" y="644" class="button">Send POD after drop please.</text>
+    <text x="440" y="668" class="small" fill="#dce8ff">Controller • 10:24 AM</text>
+
+    <rect x="398" y="708" width="448" height="30" rx="15" fill="#ffffff" stroke="#dce6f3"/>
+    <text x="424" y="728" class="small">Enter text message...</text>
+    <rect x="776" y="700" width="70" height="46" rx="14" fill="#13a27a"/>
+    <text x="797" y="729" class="button">Send</text>
+  </g>
+
+  <g>
+    <rect x="930" y="170" width="250" height="382" rx="30" fill="#182334"/>
+    <rect x="948" y="188" width="214" height="346" rx="24" fill="#ffffff" stroke="#dce6f3"/>
+    <rect x="1028" y="176" width="58" height="6" rx="3" fill="#4a5568"/>
+    <text x="986" y="228" class="section">Driver Side</text>
+    <text x="986" y="248" class="meta">MOBILE CHAT EXPERIENCE</text>
+
+    <rect x="972" y="274" width="166" height="54" rx="16" fill="#f9fbff" stroke="#dce6f3"/>
+    <text x="994" y="304" class="body">Controller</text>
+    <text x="994" y="324" class="small">2 unread messages</text>
+
+    <rect x="972" y="350" width="166" height="68" rx="16" fill="#214f95"/>
+    <text x="994" y="380" class="button">Send POD after drop</text>
+    <text x="994" y="402" class="small" fill="#dce8ff">10:24 AM</text>
+
+    <rect x="972" y="438" width="166" height="54" rx="16" fill="#ffffff" stroke="#dce6f3"/>
+    <text x="994" y="468" class="small">Reply from app</text>
+
+    <rect x="1080" y="502" width="58" height="14" rx="7" fill="#13a27a"/>
+    <text x="1092" y="513" class="badge">Live</text>
+  </g>
+
+  <g>
+    <rect x="930" y="580" width="580" height="390" rx="28" fill="url(#panel)" stroke="#d9e4f3"/>
+    <text x="968" y="622" class="section">Backend Flow</text>
+    <text x="968" y="644" class="meta">EXPRESS + SOCKET.IO + MONGO + MYSQL + FIREBASE</text>
+
+    <rect x="968" y="682" width="220" height="90" rx="18" fill="#f9fbff" stroke="#dce6f3"/>
+    <text x="992" y="716" class="section">Express Routes</text>
+    <text x="992" y="742" class="mono">/saveChatMessage</text>
+    <text x="992" y="762" class="mono">/getDriverControllerChat</text>
+
+    <rect x="1220" y="682" width="250" height="90" rx="18" fill="#f9fbff" stroke="#dce6f3"/>
+    <text x="1244" y="716" class="section">Socket.IO Layer</text>
+    <text x="1244" y="742" class="small">live message events</text>
+    <text x="1244" y="762" class="small">driver status + notification events</text>
+
+    <rect x="968" y="812" width="160" height="100" rx="18" fill="#eefaf6" stroke="#cfeadd"/>
+    <text x="994" y="848" class="section">MongoDB</text>
+    <text x="994" y="872" class="small">chat documents</text>
+    <text x="994" y="892" class="small">message history</text>
+
+    <rect x="1152" y="812" width="160" height="100" rx="18" fill="#fff4e8" stroke="#f2ddc2"/>
+    <text x="1178" y="848" class="section">MySQL</text>
+    <text x="1178" y="872" class="small">chat session token</text>
+    <text x="1178" y="892" class="small">driver metadata + last msg</text>
+
+    <rect x="1336" y="812" width="160" height="100" rx="18" fill="#fff1f0" stroke="#efcfcb"/>
+    <text x="1362" y="848" class="section">Firebase</text>
+    <text x="1362" y="872" class="small">unread counter state</text>
+    <text x="1362" y="892" class="small">receiver notification path</text>
+
+    <line x1="1078" y1="772" x2="1078" y2="812" stroke="#214f95" stroke-width="4" marker-end="url(#arrow)"/>
+    <line x1="1346" y1="772" x2="1346" y2="812" stroke="#214f95" stroke-width="4" marker-end="url(#arrow)"/>
+    <line x1="1188" y1="726" x2="1220" y2="726" stroke="#214f95" stroke-width="4" marker-end="url(#arrow)"/>
+
+    <text x="968" y="950" class="body">One message flow updates live delivery, stored history, unread state, and last-message context together.</text>
+  </g>
+
+  <path d="M900 360 L930 360" fill="none" stroke="#214f95" stroke-width="4" marker-end="url(#arrow)"/>
+  <path d="M1178 424 L1178 580" fill="none" stroke="#214f95" stroke-width="4" marker-end="url(#arrow)"/>
+</svg>

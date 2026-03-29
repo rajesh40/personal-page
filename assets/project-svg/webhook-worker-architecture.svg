@@ -1,0 +1,168 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="980" viewBox="0 0 1500 980" role="img" aria-labelledby="title desc">
+  <title id="title">Webhook Worker Architecture</title>
+  <desc id="desc">Architecture diagram showing parcel-api producing shipment webhook events into Redis Streams, webhook-worker consuming and enriching them from MySQL, and generic-inventory-management receiving normalized payloads and logging them.</desc>
+
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f8fbff"/>
+      <stop offset="100%" stop-color="#eef4ff"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 Z" fill="#3554d1"/>
+    </marker>
+    <marker id="arrowRed" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 Z" fill="#cf3f56"/>
+    </marker>
+    <style>
+      .title { font: 700 34px 'Segoe UI', Arial, sans-serif; fill: #15213b; }
+      .subtitle { font: 500 17px 'Segoe UI', Arial, sans-serif; fill: #51617e; }
+      .panel-title { font: 700 22px 'Segoe UI', Arial, sans-serif; fill: #10203d; }
+      .panel-subtitle { font: 600 14px 'Segoe UI', Arial, sans-serif; fill: #557091; letter-spacing: 0.5px; }
+      .section-title { font: 700 16px 'Segoe UI', Arial, sans-serif; fill: #16304d; }
+      .body { font: 500 14px 'Segoe UI', Arial, sans-serif; fill: #2b3c55; }
+      .small { font: 600 13px 'Segoe UI', Arial, sans-serif; fill: #41526f; }
+      .label { font: 700 14px 'Segoe UI', Arial, sans-serif; fill: #2640a8; }
+      .danger { font: 700 14px 'Segoe UI', Arial, sans-serif; fill: #a3314b; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="1500" height="980" fill="url(#bg)"/>
+  <rect x="30" y="28" width="1440" height="924" rx="24" fill="#ffffff" stroke="#d7e2f3"/>
+
+  <text x="70" y="92" class="title">Webhook Worker: Cross-Project Architecture</text>
+  <text x="70" y="124" class="subtitle">Producer: parcel-api  →  Queue: Redis Stream  →  Consumer: webhook-worker  →  Receiver: generic-inventory-management</text>
+
+  <g>
+    <rect x="70" y="170" width="320" height="280" rx="22" fill="#fff5f0" stroke="#f1c9b8" stroke-width="2"/>
+    <text x="95" y="210" class="panel-title">parcel-api</text>
+    <text x="95" y="234" class="panel-subtitle">PRODUCER SYSTEM</text>
+
+    <rect x="95" y="255" width="270" height="62" rx="14" fill="#ffffff" stroke="#ebd6ca"/>
+    <text x="115" y="280" class="section-title">Business Actions</text>
+    <text x="115" y="302" class="body">Booking, return, cancel, tracking updates</text>
+
+    <rect x="95" y="332" width="270" height="80" rx="14" fill="#ffffff" stroke="#ebd6ca"/>
+    <text x="115" y="357" class="section-title">Middleware / Producer Logic</text>
+    <text x="115" y="379" class="body">`queueWebhookPayload(...)`</text>
+    <text x="115" y="399" class="body">`queueReturnedWebhookPayloads(...)`</text>
+
+    <text x="95" y="438" class="small">Queues events like:</text>
+    <text x="95" y="462" class="body">• SHIPMENT_BOOKED</text>
+    <text x="95" y="484" class="body">• SHIPMENT_RETURNED</text>
+    <text x="95" y="506" class="body">• SHIPMENT_CANCELLED</text>
+  </g>
+
+  <g>
+    <rect x="470" y="215" width="250" height="140" rx="26" fill="#f4f0ff" stroke="#cec2f2" stroke-width="2"/>
+    <ellipse cx="595" cy="240" rx="92" ry="18" fill="#ebe4ff" stroke="#cec2f2"/>
+    <rect x="503" y="240" width="184" height="74" fill="#ebe4ff" stroke="#cec2f2"/>
+    <ellipse cx="595" cy="314" rx="92" ry="18" fill="#ebe4ff" stroke="#cec2f2"/>
+    <text x="535" y="275" class="panel-title">Redis Stream</text>
+    <text x="515" y="300" class="body">`parcel-api:webhook:events`</text>
+    <text x="535" y="335" class="small">consumer group: `webhook-workers`</text>
+  </g>
+
+  <g>
+    <rect x="785" y="150" width="410" height="420" rx="22" fill="#eef8ff" stroke="#bfd9f0" stroke-width="2"/>
+    <text x="812" y="190" class="panel-title">webhook-worker</text>
+    <text x="812" y="214" class="panel-subtitle">NESTJS CONSUMER</text>
+
+    <rect x="812" y="238" width="356" height="60" rx="14" fill="#ffffff" stroke="#cfe1ef"/>
+    <text x="832" y="263" class="section-title">1. Read / Claim Events</text>
+    <text x="832" y="285" class="body">`readGroup()` and `claimPending()` from Redis</text>
+
+    <rect x="812" y="312" width="356" height="60" rx="14" fill="#ffffff" stroke="#cfe1ef"/>
+    <text x="832" y="337" class="section-title">2. Parse + Route</text>
+    <text x="832" y="359" class="body">Detect `event_code`, `event_group`, `load_identity`</text>
+
+    <rect x="812" y="386" width="356" height="72" rx="14" fill="#ffffff" stroke="#cfe1ef"/>
+    <text x="832" y="411" class="section-title">3. Enrich From MySQL</text>
+    <text x="832" y="433" class="body">Shipment, service, items, order, BOM lookup</text>
+    <text x="832" y="453" class="body">Build normalized inventory payload</text>
+
+    <rect x="812" y="472" width="356" height="60" rx="14" fill="#ffffff" stroke="#cfe1ef"/>
+    <text x="832" y="497" class="section-title">4. Deliver</text>
+    <text x="832" y="519" class="body">POST payload to inventory webhook endpoint</text>
+
+    <rect x="812" y="546" width="170" height="64" rx="14" fill="#f0fff7" stroke="#c8ead9"/>
+    <text x="832" y="571" class="section-title">Success Path</text>
+    <text x="832" y="593" class="body">ACK + clear retry</text>
+
+    <rect x="998" y="546" width="170" height="64" rx="14" fill="#fff1f2" stroke="#f2c6cb"/>
+    <text x="1018" y="571" class="section-title">Failure Path</text>
+    <text x="1018" y="593" class="body">retry → DLQ</text>
+  </g>
+
+  <g>
+    <rect x="1240" y="170" width="200" height="280" rx="22" fill="#f1fbf2" stroke="#c7e6c9" stroke-width="2"/>
+    <text x="1265" y="210" class="panel-title">generic-inventory-</text>
+    <text x="1265" y="236" class="panel-title">management</text>
+    <text x="1265" y="260" class="panel-subtitle">NEXT.JS RECEIVER</text>
+
+    <rect x="1265" y="282" width="150" height="58" rx="14" fill="#ffffff" stroke="#d3ead6"/>
+    <text x="1282" y="307" class="section-title">Webhook API</text>
+    <text x="1282" y="328" class="body">`/api/webhook/`</text>
+    <text x="1282" y="346" class="body">`instadispatch`</text>
+
+    <rect x="1265" y="356" width="150" height="72" rx="14" fill="#ffffff" stroke="#d3ead6"/>
+    <text x="1282" y="381" class="section-title">Receiver Logic</text>
+    <text x="1282" y="403" class="body">validate token</text>
+    <text x="1282" y="421" class="body">validate payload</text>
+
+    <text x="1265" y="454" class="small">Then dispatch event handler</text>
+  </g>
+
+  <g>
+    <rect x="85" y="630" width="300" height="170" rx="22" fill="#f8fbff" stroke="#d0dff1" stroke-width="2"/>
+    <text x="110" y="668" class="panel-title">MySQL Shipment Data</text>
+    <text x="110" y="692" class="panel-subtitle">ENRICHMENT SOURCE</text>
+    <text x="110" y="728" class="body">• shipment</text>
+    <text x="110" y="752" class="body">• shipment_service</text>
+    <text x="110" y="776" class="body">• shipment_items</text>
+    <text x="110" y="800" class="body">• orders</text>
+  </g>
+
+  <g>
+    <rect x="470" y="650" width="250" height="72" rx="18" fill="#fff6f7" stroke="#f2c8cf" stroke-width="2"/>
+    <text x="510" y="682" class="panel-title">Redis Retry State</text>
+    <text x="505" y="707" class="body">retry counters + pending claims</text>
+
+    <rect x="470" y="740" width="250" height="72" rx="18" fill="#fff2f4" stroke="#efbec7" stroke-width="2"/>
+    <text x="545" y="772" class="panel-title">DLQ Stream</text>
+    <text x="514" y="797" class="body">failed events after max retries</text>
+  </g>
+
+  <g>
+    <rect x="1240" y="640" width="200" height="90" rx="18" fill="#fffdf5" stroke="#eadfae" stroke-width="2"/>
+    <text x="1280" y="674" class="panel-title">Postgres Log</text>
+    <text x="1270" y="700" class="body">`webhook_logs` table</text>
+  </g>
+
+  <line x1="390" y1="285" x2="470" y2="285" stroke="#3554d1" stroke-width="4" marker-end="url(#arrow)"/>
+  <text x="404" y="268" class="label">1. queue event</text>
+
+  <line x1="720" y1="285" x2="785" y2="285" stroke="#3554d1" stroke-width="4" marker-end="url(#arrow)"/>
+  <text x="729" y="268" class="label">2. consume</text>
+
+  <line x1="990" y1="570" x2="990" y2="630" stroke="#3554d1" stroke-width="4" marker-end="url(#arrow)"/>
+  <text x="1010" y="612" class="label">success</text>
+
+  <path d="M895 458 C 820 560, 610 600, 385 700" fill="none" stroke="#3554d1" stroke-width="4" marker-end="url(#arrow)"/>
+  <text x="635" y="560" class="label">3. enrich from DB</text>
+
+  <line x1="1195" y1="300" x2="1240" y2="300" stroke="#3554d1" stroke-width="4" marker-end="url(#arrow)"/>
+  <text x="1160" y="282" class="label">4. POST payload</text>
+
+  <line x1="1340" y1="450" x2="1340" y2="640" stroke="#3554d1" stroke-width="4" marker-end="url(#arrow)"/>
+  <text x="1355" y="546" class="label">log event</text>
+
+  <path d="M1085 610 C 1090 700, 760 770, 720 776" fill="none" stroke="#cf3f56" stroke-width="4" marker-end="url(#arrowRed)"/>
+  <text x="925" y="720" class="danger">failure → increment retry</text>
+
+  <path d="M1095 610 C 1110 760, 765 835, 720 776" fill="none" stroke="#cf3f56" stroke-width="4" marker-end="url(#arrowRed)"/>
+  <text x="905" y="812" class="danger">after max retries → DLQ</text>
+
+  <rect x="70" y="850" width="1370" height="72" rx="18" fill="#f7faff" stroke="#d9e6f4"/>
+  <text x="95" y="882" class="section-title">Interview Meaning</text>
+  <text x="95" y="906" class="body">This project shows producer-consumer architecture, Redis Streams, async processing, MySQL enrichment, cross-project webhook delivery, retry strategy, and DLQ handling.</text>
+</svg>

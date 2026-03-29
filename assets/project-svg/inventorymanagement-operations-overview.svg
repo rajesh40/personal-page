@@ -1,0 +1,243 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1220" viewBox="0 0 1600 1220" role="img" aria-labelledby="title desc">
+  <title id="title">Inventory Management Operations Overview</title>
+  <desc id="desc">A graphical view of the inventorymanagement project showing browser-based stockroom administration, purchase and order workflows, mobile stock-checker execution, and the Next.js plus Prisma backend.</desc>
+
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f4f7fb"/>
+      <stop offset="100%" stop-color="#ecf2fb"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#fbfdff"/>
+    </linearGradient>
+    <linearGradient id="chrome" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#214f95"/>
+      <stop offset="100%" stop-color="#173d75"/>
+    </linearGradient>
+    <style>
+      .title { font: 700 38px 'Segoe UI', Arial, sans-serif; fill: #14213d; }
+      .subtitle { font: 500 18px 'Segoe UI', Arial, sans-serif; fill: #5a6d8a; }
+      .app-title { font: 700 24px 'Segoe UI', Arial, sans-serif; fill: #ffffff; }
+      .section { font: 700 22px 'Segoe UI', Arial, sans-serif; fill: #173153; }
+      .meta { font: 700 12px 'Segoe UI', Arial, sans-serif; fill: #617493; letter-spacing: 0.8px; }
+      .body { font: 500 16px 'Segoe UI', Arial, sans-serif; fill: #2d405d; }
+      .small { font: 500 14px 'Segoe UI', Arial, sans-serif; fill: #60718e; }
+      .tiny { font: 600 12px 'Segoe UI', Arial, sans-serif; fill: #6a7991; }
+      .button { font: 700 14px 'Segoe UI', Arial, sans-serif; fill: #ffffff; }
+      .button-alt { font: 700 14px 'Segoe UI', Arial, sans-serif; fill: #214f95; }
+      .badge { font: 700 14px 'Segoe UI', Arial, sans-serif; fill: #ffffff; }
+      .chip { font: 700 12px 'Segoe UI', Arial, sans-serif; fill: #214f95; }
+      .mono { font: 600 13px 'Consolas', 'Courier New', monospace; fill: #45617d; }
+      .ok { font: 700 12px 'Segoe UI', Arial, sans-serif; fill: #0f8f5f; }
+      .warn { font: 700 12px 'Segoe UI', Arial, sans-serif; fill: #d14d41; }
+    </style>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#214f95"/>
+    </marker>
+  </defs>
+
+  <rect width="1600" height="1220" fill="url(#bg)"/>
+  <rect x="26" y="24" width="1548" height="1172" rx="30" fill="#ffffff" stroke="#d8e2f2"/>
+
+  <text x="72" y="88" class="title">Inventory Management: Stockroom Operations View</text>
+  <text x="72" y="120" class="subtitle">A hypothetical product view reconstructed from the actual code paths: inventory control, orders, purchase orders, stockroom jobs, and mobile stock-checker execution.</text>
+
+  <rect x="70" y="164" width="1020" height="760" rx="28" fill="url(#panel)" stroke="#d9e4f3"/>
+  <rect x="70" y="164" width="1020" height="74" rx="28" fill="url(#chrome)"/>
+  <text x="108" y="210" class="app-title">Browser Admin Portal</text>
+
+  <rect x="790" y="182" width="118" height="38" rx="12" fill="#ffffff"/>
+  <text x="820" y="206" class="button-alt">Stockroom</text>
+  <rect x="922" y="182" width="140" height="38" rx="12" fill="#ffffff"/>
+  <text x="952" y="206" class="button-alt">Import / Export</text>
+
+  <g>
+    <rect x="100" y="266" width="460" height="258" rx="22" fill="#f9fbff" stroke="#dce6f3"/>
+    <circle cx="136" cy="304" r="22" fill="#214f95"/>
+    <text x="129" y="311" class="badge">1</text>
+    <text x="172" y="310" class="section">Inventory Control</text>
+    <text x="172" y="332" class="meta">SELECT STOCKROOM, VIEW COUNTS, EXPORT, IMPORT, HISTORY</text>
+
+    <text x="126" y="382" class="small">Stockroom</text>
+    <rect x="126" y="392" width="184" height="42" rx="12" fill="#ffffff" stroke="#dce6f3"/>
+    <text x="150" y="419" class="body">North Hub A</text>
+    <rect x="322" y="392" width="96" height="42" rx="12" fill="#eef7f1" stroke="#d0ead9"/>
+    <text x="350" y="419" class="button-alt">Export</text>
+    <rect x="430" y="392" width="104" height="42" rx="12" fill="#fff2f3" stroke="#f2d2d8"/>
+    <text x="458" y="419" class="button-alt">Import</text>
+
+    <rect x="126" y="454" width="408" height="48" rx="14" fill="#ffffff" stroke="#dce6f3"/>
+    <text x="150" y="484" class="mono">Master CSV upload + background processing cron</text>
+
+    <rect x="126" y="522" width="408" height="108" rx="16" fill="#ffffff" stroke="#dce6f3"/>
+    <text x="150" y="554" class="tiny">SKU</text>
+    <text x="286" y="554" class="tiny">ALLOCATED</text>
+    <text x="404" y="554" class="tiny">STOCK IN HAND</text>
+    <line x1="146" y1="568" x2="514" y2="568" stroke="#e2e9f4"/>
+    <text x="150" y="594" class="body">BRAKE-001</text>
+    <text x="306" y="594" class="body">12</text>
+    <text x="438" y="594" class="body">84</text>
+    <text x="150" y="620" class="body">FILTER-022</text>
+    <text x="306" y="620" class="body">4</text>
+    <text x="438" y="620" class="body">17</text>
+
+    <text x="126" y="650" class="small">History view, delete only when quantities reach zero, archive and error reports available.</text>
+  </g>
+
+  <g>
+    <rect x="600" y="266" width="460" height="258" rx="22" fill="#f9fbff" stroke="#dce6f3"/>
+    <circle cx="636" cy="304" r="22" fill="#214f95"/>
+    <text x="629" y="311" class="badge">2</text>
+    <text x="672" y="310" class="section">Orders + Replenishment</text>
+    <text x="672" y="332" class="meta">SALES ORDERS, REPLENISHMENT ORDERS, STATUS CONTROL</text>
+
+    <rect x="626" y="392" width="134" height="42" rx="12" fill="#ffffff" stroke="#dce6f3"/>
+    <text x="654" y="419" class="button-alt">Sales Orders</text>
+    <rect x="774" y="392" width="150" height="42" rx="12" fill="#ffffff" stroke="#dce6f3"/>
+    <text x="804" y="419" class="button-alt">Replenishment</text>
+    <rect x="938" y="392" width="96" height="42" rx="12" fill="#eef7f1" stroke="#d0ead9"/>
+    <text x="968" y="419" class="button-alt">Filters</text>
+
+    <rect x="626" y="454" width="408" height="172" rx="16" fill="#ffffff" stroke="#dce6f3"/>
+    <text x="648" y="486" class="tiny">NUMBER</text>
+    <text x="758" y="486" class="tiny">TYPE</text>
+    <text x="842" y="486" class="tiny">STOCKROOM</text>
+    <text x="964" y="486" class="tiny">STATUS</text>
+    <line x1="646" y1="500" x2="1014" y2="500" stroke="#e2e9f4"/>
+    <text x="648" y="530" class="body">SO-1043</text>
+    <text x="758" y="530" class="body">sale</text>
+    <text x="842" y="530" class="body">North Hub A</text>
+    <text x="966" y="530" class="ok">Enabled</text>
+    <text x="648" y="560" class="body">SO-1044</text>
+    <text x="758" y="560" class="body">sale</text>
+    <text x="842" y="560" class="body">North Hub B</text>
+    <text x="966" y="560" class="warn">Disabled</text>
+    <text x="648" y="590" class="body">RP-2207</text>
+    <text x="758" y="590" class="body">replenishment</text>
+    <text x="842" y="590" class="body">Returns Store</text>
+    <text x="966" y="590" class="ok">Ready</text>
+
+    <text x="626" y="650" class="small">Shared listing endpoint drives both sales and replenishment workflows, with stockroom and date filters.</text>
+  </g>
+
+  <g>
+    <rect x="100" y="548" width="460" height="344" rx="22" fill="#f9fbff" stroke="#dce6f3"/>
+    <circle cx="136" cy="586" r="22" fill="#214f95"/>
+    <text x="129" y="593" class="badge">3</text>
+    <text x="172" y="592" class="section">Purchase Orders</text>
+    <text x="172" y="614" class="meta">SUPPLIER FILES, BACK ORDERS, REQUEST AND RESPONSE DOWNLOADS</text>
+
+    <rect x="126" y="650" width="408" height="180" rx="16" fill="#ffffff" stroke="#dce6f3"/>
+    <text x="148" y="682" class="tiny">SUPPLIER ID</text>
+    <text x="278" y="682" class="tiny">PO NUMBER</text>
+    <text x="398" y="682" class="tiny">ITEMS</text>
+    <text x="470" y="682" class="tiny">STATUS</text>
+    <line x1="146" y1="696" x2="514" y2="696" stroke="#e2e9f4"/>
+    <text x="148" y="726" class="body">AX-22110</text>
+    <text x="278" y="726" class="body">VOL-9801</text>
+    <text x="410" y="726" class="body">18</text>
+    <text x="470" y="726" class="body">processing</text>
+    <text x="148" y="756" class="body">AX-22111</text>
+    <text x="278" y="756" class="body">VOL-9802</text>
+    <text x="410" y="756" class="body">7</text>
+    <text x="470" y="756" class="body">accepted</text>
+    <text x="148" y="792" class="small">View item list, download request files, and inspect response payloads.</text>
+
+    <rect x="126" y="842" width="146" height="34" rx="12" fill="#ffffff" stroke="#dce6f3"/>
+    <text x="152" y="864" class="button-alt">Request File</text>
+    <rect x="286" y="842" width="156" height="34" rx="12" fill="#ffffff" stroke="#dce6f3"/>
+    <text x="312" y="864" class="button-alt">Response File</text>
+  </g>
+
+  <g>
+    <rect x="600" y="548" width="460" height="344" rx="22" fill="#f9fbff" stroke="#dce6f3"/>
+    <circle cx="636" cy="586" r="22" fill="#214f95"/>
+    <text x="629" y="593" class="badge">4</text>
+    <text x="672" y="592" class="section">Stockroom Jobs</text>
+    <text x="672" y="614" class="meta">ASSIGNMENT, RECURRING JOBS, VIEW OR EDIT, JOB STATUS</text>
+
+    <rect x="626" y="650" width="120" height="40" rx="12" fill="#214f95"/>
+    <text x="656" y="676" class="button">New Job</text>
+    <rect x="760" y="650" width="146" height="40" rx="12" fill="#ffffff" stroke="#dce6f3"/>
+    <text x="786" y="676" class="button-alt">Recurring Job</text>
+
+    <rect x="626" y="708" width="408" height="152" rx="16" fill="#ffffff" stroke="#dce6f3"/>
+    <text x="648" y="740" class="tiny">TITLE</text>
+    <text x="798" y="740" class="tiny">ASSIGNEE</text>
+    <text x="916" y="740" class="tiny">STATUS</text>
+    <line x1="646" y1="754" x2="1014" y2="754" stroke="#e2e9f4"/>
+    <text x="648" y="784" class="body">Cycle Count A</text>
+    <text x="798" y="784" class="body">Ravi</text>
+    <text x="916" y="784" class="body">in progress</text>
+    <text x="648" y="814" class="body">Shelf Audit B</text>
+    <text x="798" y="814" class="body">Nina</text>
+    <text x="916" y="814" class="body">unassigned</text>
+    <text x="648" y="844" class="body">Returns Check</text>
+    <text x="798" y="844" class="body">Kiran</text>
+    <text x="916" y="844" class="body">complete</text>
+
+    <text x="626" y="876" class="small">Selection supports recurring-job creation, while row actions allow view, edit, and delete.</text>
+  </g>
+
+  <g>
+    <rect x="1120" y="188" width="384" height="704" rx="34" fill="#1d2636"/>
+    <rect x="1142" y="214" width="340" height="656" rx="28" fill="url(#panel)"/>
+    <rect x="1250" y="196" width="128" height="14" rx="7" fill="#2f3a4d"/>
+    <text x="1200" y="258" class="section">Stock Checker Mobile</text>
+    <text x="1200" y="280" class="meta">MY JOBS, SYNC SCAN, CHANGE STATUS, COMPLETION EVIDENCE</text>
+
+    <rect x="1172" y="312" width="280" height="88" rx="18" fill="#f6f9ff" stroke="#dce6f3"/>
+    <text x="1196" y="344" class="section">My Jobs</text>
+    <text x="1196" y="372" class="body">Cycle Count A</text>
+    <text x="1340" y="372" class="ok">in progress</text>
+    <text x="1196" y="394" class="small">Assigned using the logged-in mobile user cookie.</text>
+
+    <rect x="1172" y="420" width="280" height="110" rx="18" fill="#f6f9ff" stroke="#dce6f3"/>
+    <text x="1196" y="452" class="section">Sync Scan</text>
+    <text x="1196" y="480" class="body">Item: BRAKE-001</text>
+    <text x="1196" y="504" class="body">Scanned Qty: 18</text>
+    <text x="1196" y="526" class="small">Updates `stockCheckScans` as the user counts stock.</text>
+
+    <rect x="1172" y="550" width="280" height="116" rx="18" fill="#f6f9ff" stroke="#dce6f3"/>
+    <text x="1196" y="582" class="section">Change Job Status</text>
+    <rect x="1196" y="600" width="74" height="30" rx="12" fill="#ffffff" stroke="#dce6f3"/>
+    <text x="1214" y="620" class="chip">accept</text>
+    <rect x="1282" y="600" width="96" height="30" rx="12" fill="#ffffff" stroke="#dce6f3"/>
+    <text x="1300" y="620" class="chip">in progress</text>
+    <rect x="1390" y="600" width="62" height="30" rx="12" fill="#eef7f1" stroke="#d0ead9"/>
+    <text x="1404" y="620" class="chip">done</text>
+    <text x="1196" y="650" class="small">Can include action date, remark, signature, and images.</text>
+
+    <rect x="1172" y="686" width="280" height="148" rx="18" fill="#f6f9ff" stroke="#dce6f3"/>
+    <text x="1196" y="718" class="section">Completion Result</text>
+    <text x="1196" y="746" class="body">Job action history stored</text>
+    <text x="1196" y="770" class="body">Evidence uploaded</text>
+    <text x="1196" y="794" class="body">Inventory moved to archive snapshot</text>
+    <text x="1196" y="818" class="small">This connects floor execution back into inventory history and completed-job records.</text>
+  </g>
+
+  <path d="M1242 892 L1242 958" fill="none" stroke="#214f95" stroke-width="4" marker-end="url(#arrow)"/>
+  <path d="M580 924 L580 958" fill="none" stroke="#214f95" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <g>
+    <rect x="70" y="966" width="1434" height="196" rx="26" fill="#ffffff" stroke="#dce6f3"/>
+    <text x="106" y="1012" class="section">Under The Hood</text>
+    <text x="106" y="1034" class="meta">NEXT.JS PAGES + API ROUTES + PRISMA + POSTGRESQL</text>
+
+    <rect x="106" y="1056" width="392" height="78" rx="16" fill="#f9fbff" stroke="#dce6f3"/>
+    <text x="132" y="1088" class="section">Next.js Web Pages</text>
+    <text x="132" y="1116" class="mono">/inventory/list  /inventory/history  /jobs/list</text>
+    <text x="132" y="1136" class="mono">/order/sales/list  /inventory/replenishment/list  /purchase-order/list</text>
+
+    <rect x="536" y="1056" width="420" height="78" rx="16" fill="#f9fbff" stroke="#dce6f3"/>
+    <text x="562" y="1088" class="section">Next.js API Routes</text>
+    <text x="562" y="1116" class="mono">/api/inventory/list  /api/inventory/history  /api/order/list</text>
+    <text x="562" y="1136" class="mono">/api/jobs/list  /api/mobile/stock-checker/*  /api/item/processmastercsvcron</text>
+
+    <rect x="994" y="1056" width="474" height="78" rx="16" fill="#f9fbff" stroke="#dce6f3"/>
+    <text x="1020" y="1088" class="section">Prisma + PostgreSQL Models</text>
+    <text x="1020" y="1116" class="mono">Inventory  InventoryItem  InventoryHistory  Order  stockRoomJob</text>
+    <text x="1020" y="1136" class="mono">StockCheckScans  PurchaseOrder  PurchaseOrderItems</text>
+  </g>
+</svg>

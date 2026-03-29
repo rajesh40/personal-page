@@ -1,0 +1,170 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1220" viewBox="0 0 1600 1220" role="img" aria-labelledby="title desc">
+  <title id="title">Linnworks Integration Overview</title>
+  <desc id="desc">Backend integration diagram showing Linnworks, the NestJS linnworks integration service, parcel-api or restservices booking layer, local mapping tables, and label document conversion.</desc>
+
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f6f9ff"/>
+      <stop offset="100%" stop-color="#eef4ff"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 Z" fill="#315ee2"/>
+    </marker>
+    <marker id="arrowRed" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 Z" fill="#c54258"/>
+    </marker>
+    <style>
+      .title { font: 700 36px 'Segoe UI', Arial, sans-serif; fill: #13223d; }
+      .subtitle { font: 500 18px 'Segoe UI', Arial, sans-serif; fill: #59708d; }
+      .panel-title { font: 700 24px 'Segoe UI', Arial, sans-serif; fill: #14233d; }
+      .panel-subtitle { font: 700 12px 'Segoe UI', Arial, sans-serif; fill: #5d7392; letter-spacing: 0.8px; }
+      .section { font: 700 18px 'Segoe UI', Arial, sans-serif; fill: #1a3556; }
+      .body { font: 500 15px 'Segoe UI', Arial, sans-serif; fill: #2c3f5c; }
+      .small { font: 500 13px 'Segoe UI', Arial, sans-serif; fill: #60738f; }
+      .label { font: 700 14px 'Segoe UI', Arial, sans-serif; fill: #2e56d9; }
+      .danger { font: 700 14px 'Segoe UI', Arial, sans-serif; fill: #b43a51; }
+    </style>
+  </defs>
+
+  <rect width="1600" height="1220" fill="url(#bg)"/>
+  <rect x="26" y="22" width="1548" height="1176" rx="28" fill="#ffffff" stroke="#d9e4f4"/>
+  <text x="70" y="86" class="title">Linnworks: Backend Integration View</text>
+  <text x="70" y="118" class="subtitle">This project is best shown as a service-to-service flow: Linnworks request in, request transformation, downstream booking call, label conversion, and cancellation using saved identities.</text>
+
+  <g>
+    <rect x="72" y="180" width="260" height="188" rx="24" fill="#eef4ff" stroke="#d1dff5" stroke-width="2"/>
+    <text x="108" y="228" class="panel-title">Linnworks</text>
+    <text x="108" y="252" class="panel-subtitle">UPSTREAM PLATFORM</text>
+    <text x="108" y="296" class="body">Sends:</text>
+    <text x="108" y="324" class="body">• `GenerateLabel`</text>
+    <text x="108" y="352" class="body">• `CancelLabel`</text>
+  </g>
+
+  <g>
+    <rect x="396" y="156" width="454" height="418" rx="24" fill="#f9fbff" stroke="#dbe6f3" stroke-width="2"/>
+    <text x="430" y="204" class="panel-title">NestJS `linnworks` Service</text>
+    <text x="430" y="228" class="panel-subtitle">INTEGRATION LAYER</text>
+
+    <rect x="430" y="264" width="386" height="64" rx="14" fill="#ffffff" stroke="#dbe6f3"/>
+    <text x="452" y="291" class="section">1. Accept Linnworks Request</text>
+    <text x="452" y="314" class="small">`api/Consignment/GenerateLabel` and `api/Consignment/CancelLabel`</text>
+
+    <rect x="430" y="346" width="386" height="74" rx="14" fill="#ffffff" stroke="#dbe6f3"/>
+    <text x="452" y="373" class="section">2. Load Config + Service Mapping</text>
+    <text x="452" y="396" class="small">authorization token, service config, address rules, carrier mapping</text>
+
+    <rect x="430" y="438" width="386" height="74" rx="14" fill="#ffffff" stroke="#dbe6f3"/>
+    <text x="452" y="465" class="section">3. Transform Request</text>
+    <text x="452" y="488" class="small">order, address, parcel, item, and service data become downstream shipment payload</text>
+
+    <rect x="430" y="530" width="386" height="74" rx="14" fill="#ffffff" stroke="#dbe6f3"/>
+    <text x="452" y="557" class="section">4. Return Linnworks-Friendly Response</text>
+    <text x="452" y="580" class="small">tracking number, PDF bytes, PNG label, label size, error state</text>
+  </g>
+
+  <g>
+    <rect x="908" y="180" width="286" height="188" rx="24" fill="#eefbf4" stroke="#cae8d3" stroke-width="2"/>
+    <text x="942" y="228" class="panel-title">Linnworks APIs</text>
+    <text x="942" y="252" class="panel-subtitle">ORDER + LOCATION LOOKUP</text>
+    <text x="942" y="296" class="body">• authorize app</text>
+    <text x="942" y="324" class="body">• get order details</text>
+    <text x="942" y="352" class="body">• get location info</text>
+  </g>
+
+  <g>
+    <rect x="1250" y="156" width="270" height="212" rx="24" fill="#fff7ef" stroke="#efd5bf" stroke-width="2"/>
+    <text x="1284" y="204" class="panel-title">`parcel-api` /</text>
+    <text x="1284" y="232" class="panel-title">`restservices` Layer</text>
+    <text x="1284" y="256" class="panel-subtitle">DOWNSTREAM BOOKING API</text>
+    <text x="1284" y="304" class="body">Endpoints used through `ApiClientService`:</text>
+    <text x="1284" y="332" class="body">• `bookJob`</text>
+    <text x="1284" y="360" class="body">• `cancelJobV2`</text>
+  </g>
+
+  <g>
+    <rect x="1246" y="430" width="274" height="178" rx="24" fill="#fffdf5" stroke="#eadfb0" stroke-width="2"/>
+    <text x="1280" y="478" class="panel-title">Booking Response</text>
+    <text x="1280" y="502" class="panel-subtitle">LABEL FILES + TRACKING</text>
+    <text x="1280" y="546" class="body">• tracking number</text>
+    <text x="1280" y="574" class="body">• PDF label path</text>
+    <text x="1280" y="602" class="body">• customer price / currency</text>
+  </g>
+
+  <g>
+    <rect x="74" y="454" width="262" height="200" rx="24" fill="#fdf7ff" stroke="#e4d4f3" stroke-width="2"/>
+    <text x="108" y="502" class="panel-title">Local Config</text>
+    <text x="108" y="526" class="panel-subtitle">`LinnworkConfig` + services</text>
+    <text x="108" y="570" class="body">Stores:</text>
+    <text x="108" y="598" class="body">• authorization token</text>
+    <text x="108" y="626" class="body">• InstaDispatch token</text>
+    <text x="108" y="654" class="body">• service list and config</text>
+  </g>
+
+  <g>
+    <rect x="396" y="640" width="454" height="214" rx="24" fill="#f9fbff" stroke="#dbe6f3" stroke-width="2"/>
+    <text x="430" y="688" class="panel-title">Document + Response Formatting</text>
+    <text x="430" y="712" class="panel-subtitle">PDF TO PNG + BASE64 OUTPUT</text>
+    <text x="430" y="756" class="body">• convert PDF file to base64</text>
+    <text x="430" y="784" class="body">• convert first page to PNG base64</text>
+    <text x="430" y="812" class="body">• read label width and height</text>
+    <text x="430" y="840" class="body">• return formatted package data to Linnworks</text>
+  </g>
+
+  <g>
+    <rect x="910" y="640" width="284" height="214" rx="24" fill="#eefbf4" stroke="#cae8d3" stroke-width="2"/>
+    <text x="944" y="688" class="panel-title">Order + Location</text>
+    <text x="944" y="712" class="panel-subtitle">ENRICHMENT DATA</text>
+    <text x="944" y="756" class="body">• fulfilment location</text>
+    <text x="944" y="784" class="body">• warehouse address</text>
+    <text x="944" y="812" class="body">• service-specific config</text>
+  </g>
+
+  <g>
+    <rect x="1250" y="670" width="270" height="184" rx="24" fill="#fff4f6" stroke="#efcbd1" stroke-width="2"/>
+    <text x="1284" y="718" class="panel-title">Label Mapping Table</text>
+    <text x="1284" y="742" class="panel-subtitle">`IcargoLinnworkLabels`</text>
+    <text x="1284" y="786" class="body">Stores mapping between:</text>
+    <text x="1284" y="814" class="body">• order id / order ref</text>
+    <text x="1284" y="842" class="body">• downstream identity</text>
+  </g>
+
+  <g>
+    <rect x="72" y="914" width="1450" height="240" rx="24" fill="#ffffff" stroke="#dce6f3" stroke-width="2"/>
+    <text x="104" y="958" class="panel-title">Two Main Flows</text>
+
+    <rect x="104" y="986" width="666" height="132" rx="18" fill="#f8fbff" stroke="#dbe6f3"/>
+    <text x="132" y="1024" class="section">GenerateLabel</text>
+    <text x="132" y="1052" class="body">Linnworks request → load config → fetch order and location → build shipment payload → call `bookJob` → convert label docs → save identity mapping → return Linnworks response</text>
+
+    <rect x="822" y="986" width="670" height="132" rx="18" fill="#fff8fa" stroke="#efd7dc"/>
+    <text x="850" y="1024" class="section">CancelLabel</text>
+    <text x="850" y="1052" class="body">Linnworks cancel request → load config → find saved identities by order reference → call `cancelJobV2` → mark mapped identities as canceled</text>
+  </g>
+
+  <line x1="332" y1="272" x2="396" y2="272" stroke="#315ee2" stroke-width="4" marker-end="url(#arrow)"/>
+  <text x="338" y="252" class="label">GenerateLabel / CancelLabel</text>
+
+  <line x1="850" y1="282" x2="908" y2="282" stroke="#315ee2" stroke-width="4" marker-end="url(#arrow)"/>
+  <text x="854" y="260" class="label">fetch order data</text>
+
+  <line x1="1194" y1="282" x2="1250" y2="282" stroke="#315ee2" stroke-width="4" marker-end="url(#arrow)"/>
+  <text x="1190" y="260" class="label">book / cancel</text>
+
+  <line x1="1386" y1="368" x2="1386" y2="430" stroke="#315ee2" stroke-width="4" marker-end="url(#arrow)"/>
+  <text x="1400" y="406" class="label">booking response</text>
+
+  <line x1="1246" y1="520" x2="850" y2="520" stroke="#315ee2" stroke-width="4" marker-end="url(#arrow)"/>
+  <text x="1008" y="500" class="label">PDF path + tracking</text>
+
+  <line x1="332" y1="548" x2="396" y2="548" stroke="#315ee2" stroke-width="4" marker-end="url(#arrow)"/>
+  <text x="342" y="528" class="label">config lookup</text>
+
+  <line x1="850" y1="746" x2="910" y2="746" stroke="#315ee2" stroke-width="4" marker-end="url(#arrow)"/>
+  <text x="852" y="726" class="label">enrichment data</text>
+
+  <line x1="1194" y1="746" x2="1250" y2="746" stroke="#315ee2" stroke-width="4" marker-end="url(#arrow)"/>
+  <text x="1176" y="726" class="label">save mapping</text>
+
+  <path d="M 1384 854 C 1400 905, 1280 940, 1120 986" fill="none" stroke="#c54258" stroke-width="4" marker-end="url(#arrowRed)"/>
+  <text x="1260" y="930" class="danger">used by CancelLabel</text>
+</svg>

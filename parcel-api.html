@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>parcel-api | Rajesh Kumar</title>
+    <link rel="stylesheet" href="styles/sketch.css" />
+  </head>
+  <body>
+    <div class="page-wrap">
+      <div class="frame">
+        <aside class="sidebar">
+          <nav class="sidebar-box">
+            <p class="box-title">Dashboard Map</p>
+            <div class="project-nav-list">
+              <a class="project-link" href="index.html">Home</a>
+              <a class="project-link" href="icargo.html">iCargo</a>
+              <a class="project-link active" href="parcel-api.html">parcel-api</a>
+              <a class="project-link" href="icargo-customer.html">iCargo Customer</a>
+              <a class="project-link" href="vehicle-inspection.html">Vehicle Inspection</a>
+              <a class="project-link" href="rule-manager.html">Rule Engine</a>
+              <a class="project-link" href="rate-engine.html">Rate Engine</a>
+              <a class="project-link" href="bagging.html">Bagging</a>
+              <a class="project-link" href="route-manager.html">Route Manager</a>
+              <a class="project-link" href="inventory-management.html">Inventory Management</a>
+              <a class="project-link" href="onboarding.html">Onboarding</a>
+              <a class="project-link" href="linnworks.html">Linnworks</a>
+              <a class="project-link" href="webhook-worker.html">Webhook Worker</a>
+              <a class="project-link" href="chat.html">Chat</a>
+              <a class="project-link" href="order-integrations.html">Third Party Order Fetch</a>
+              <a class="project-link" href="batch-operations.html">Batch Operations</a>
+              <a class="project-link" href="chargebee-cart.html">Chargebee Cart</a>
+            </div>
+          </nav>
+        </aside>
+
+        <main class="content">
+          <section class="content-head">
+            <p class="label">Shared Backend</p>
+            <h2 class="page-title">parcel-api</h2>
+            <p class="summary-text">
+              parcel-api was the shared backend platform behind both the internal iCargo operations UI and the iCargo Customer portal.
+            </p>
+          </section>
+
+          <section class="content-grid">
+            <article class="content-box full">
+              <h2>Visual Overview</h2>
+              <div class="media-shell">
+                <div class="media-stage">
+                  <img
+                    class="media-image media-image--static"
+                    src="assets/project-svg/parcel-api-auth-shared-services.svg"
+                    alt="parcel-api shared auth and services overview"
+                  />
+                </div>
+                <p class="media-caption">
+                  Reference visual summarizing the shared auth context and cross-product services behind parcel-api.
+                </p>
+              </div>
+            </article>
+
+            <article class="content-box">
+              <h2>Why It Matters</h2>
+              <p class="detail-text">
+                This is the central business layer story. It shows one backend serving multiple product surfaces instead of a small helper API.
+              </p>
+            </article>
+
+            <article class="content-box">
+              <h2>Tech Stack</h2>
+              <ul class="detail-list">
+                <li>PHP backend platform</li>
+                <li>Redis-backed business workflows</li>
+                <li>token-based API access and shared context</li>
+                <li>order-ingestion and logistics APIs</li>
+              </ul>
+            </article>
+
+            <article class="content-box">
+              <h2>What I Worked On</h2>
+              <ul class="detail-list">
+                <li>shipment booking, pricing, route, and webhook flows</li>
+                <li>shared APIs used by both internal and customer-facing products</li>
+                <li>customer settings and authenticated request context</li>
+                <li>external order-ingestion workflows from commerce platforms</li>
+              </ul>
+            </article>
+
+            <article class="content-box">
+              <h2>Related Pages</h2>
+              <p class="detail-text">
+                parcel-api connects the main iCargo product, customer portal, and several integration-heavy services.
+              </p>
+              <div class="link-list">
+                <a href="icargo.html">Open iCargo</a>
+                <a href="icargo-customer.html">Open iCargo Customer</a>
+                <a href="webhook-worker.html">Open Webhook Worker</a>
+              </div>
+            </article>
+          </section>
+
+          <footer class="footer-row">
+            <a class="footer-link" href="icargo.html">Previous: iCargo</a>
+            <a class="footer-link" href="icargo-customer.html">Next: iCargo Customer</a>
+          </footer>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

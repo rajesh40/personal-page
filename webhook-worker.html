@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Webhook Worker | Rajesh Kumar</title>
+    <link rel="stylesheet" href="styles/sketch.css" />
+  </head>
+  <body>
+    <div class="page-wrap">
+      <div class="frame">
+        <aside class="sidebar">
+          <nav class="sidebar-box">
+            <p class="box-title">Dashboard Map</p>
+            <div class="project-nav-list">
+              <a class="project-link" href="index.html">Home</a>
+              <a class="project-link" href="icargo.html">iCargo</a>
+              <a class="project-link" href="parcel-api.html">parcel-api</a>
+              <a class="project-link" href="icargo-customer.html">iCargo Customer</a>
+              <a class="project-link" href="vehicle-inspection.html">Vehicle Inspection</a>
+              <a class="project-link" href="rule-manager.html">Rule Engine</a>
+              <a class="project-link" href="rate-engine.html">Rate Engine</a>
+              <a class="project-link" href="bagging.html">Bagging</a>
+              <a class="project-link" href="route-manager.html">Route Manager</a>
+              <a class="project-link" href="inventory-management.html">Inventory Management</a>
+              <a class="project-link" href="onboarding.html">Onboarding</a>
+              <a class="project-link" href="linnworks.html">Linnworks</a>
+              <a class="project-link active" href="webhook-worker.html">Webhook Worker</a>
+              <a class="project-link" href="chat.html">Chat</a>
+              <a class="project-link" href="order-integrations.html">Third Party Order Fetch</a>
+              <a class="project-link" href="batch-operations.html">Batch Operations</a>
+              <a class="project-link" href="chargebee-cart.html">Chargebee Cart</a>
+            </div>
+          </nav>
+        </aside>
+
+        <main class="content">
+          <section class="content-head">
+            <p class="label">Independent Project</p>
+            <h2 class="page-title">Webhook Worker</h2>
+            <p class="summary-text">
+              Webhook Worker is a NestJS-based async backend service that consumes shipment events from Redis Streams,
+              enriches data, and posts normalized payloads downstream with retry and DLQ handling.
+            </p>
+          </section>
+
+          <section class="content-grid">
+            <article class="content-box full">
+              <h2>Visual Overview</h2>
+              <div class="media-shell">
+                <div class="media-stage">
+                  <img
+                    class="media-image media-image--static"
+                    src="assets/project-svg/webhook-worker-architecture.svg"
+                    alt="Webhook Worker architecture overview"
+                  />
+                </div>
+                <p class="media-caption">
+                  Reference visual of the event flow from producer to worker, enrichment, and downstream delivery.
+                </p>
+              </div>
+            </article>
+
+            <article class="content-box">
+              <h2>Why It Matters</h2>
+              <p class="detail-text">
+                This is one of the strongest backend examples because it shows event-driven design, reliability concerns,
+                async processing, and production-style failure handling.
+              </p>
+            </article>
+
+            <article class="content-box">
+              <h2>Tech Stack</h2>
+              <ul class="detail-list">
+                <li>NestJS worker service</li>
+                <li>Redis Streams and consumer groups</li>
+                <li>TypeORM and MySQL-backed enrichment</li>
+                <li>retry and DLQ behavior</li>
+              </ul>
+            </article>
+
+            <article class="content-box">
+              <h2>What I Worked On</h2>
+              <ul class="detail-list">
+                <li>async event consumption and processing flow</li>
+                <li>payload enrichment from shipment and service data</li>
+                <li>retry logic, pending-message recovery, and dead-letter flow</li>
+                <li>producer-consumer integration with parcel-api</li>
+              </ul>
+            </article>
+
+            <article class="content-box">
+              <h2>Related Pages</h2>
+              <p class="detail-text">
+                This is the best page to open first if the interviewer wants a modern backend example quickly.
+              </p>
+              <div class="link-list">
+                <a href="parcel-api.html">Open parcel-api</a>
+                <a href="linnworks.html">Open Linnworks</a>
+              </div>
+            </article>
+          </section>
+
+          <footer class="footer-row">
+            <a class="footer-link" href="linnworks.html">Previous: Linnworks</a>
+            <a class="footer-link" href="index.html">Back To Dashboard</a>
+          </footer>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>
